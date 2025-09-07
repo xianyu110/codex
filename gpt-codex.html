@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GPT Codex CLI完全使用指南 - OpenAI最新AI编程工具教程">
+    <meta name="keywords" content="GPT Codex, OpenAI, AI编程, CLI工具, 教程">
+    <meta name="author" content="AI特惠中心">
+    <meta property="og:title" content="GPT Codex CLI完全使用指南">
+    <meta property="og:description" content="OpenAI最新AI编程工具Codex CLI完整教程">
+    <meta property="og:type" content="article">
+    <title>GPT Codex CLI完全使用指南 - AI特惠中心</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .markdown-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+        }
+        
+        .markdown-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            margin: 20px 0;
+        }
+        
+        .markdown-content h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+        }
+        
+        .markdown-content h2 {
+            font-size: 2rem;
+            color: #2563eb;
+            margin: 40px 0 20px 0;
+            border-left: 4px solid #2563eb;
+            padding-left: 15px;
+        }
+        
+        .markdown-content h3 {
+            font-size: 1.5rem;
+            color: #1f2937;
+            margin: 30px 0 15px 0;
+        }
+        
+        .markdown-content p {
+            color: #4b5563;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .markdown-content code {
+            background: #f3f4f6;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+            color: #e74c3c;
+        }
+        
+        .markdown-content pre {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .markdown-content pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+        
+        .markdown-content blockquote {
+            border-left: 4px solid #2563eb;
+            padding-left: 20px;
+            margin: 20px 0;
+            color: #6b7280;
+            font-style: italic;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .markdown-content ul, .markdown-content ol {
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+        
+        .markdown-content li {
+            margin: 10px 0;
+            color: #4b5563;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .highlight-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .step-guide {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #10b981;
+        }
+        
+        .step-number {
+            background: #10b981;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .markdown-content {
+                padding: 20px 15px;
+            }
+            
+            .markdown-content h1 {
+                font-size: 2rem;
+            }
+            
+            .markdown-content h2 {
+                font-size: 1.6rem;
+            }
+            
+            .highlight-box {
+                padding: 20px;
+            }
+            
+            .step-guide {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>🌞 AI特惠中心</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="gpt-codex.html" class="active">GPT Codex</a>
+                <a href="readme.html">使用指南</a>
+                <a href="#contact">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="markdown-content">
+        <h1>🚀 GPT Codex CLI完全使用指南</h1>
+        
+        <div class="highlight-box">
+            <h3>随着 Anthropic 全面禁止 Claude 模型在中国渠道使用，Codex Cli 或将是你下一个 AI 编程新宠。</h3>
+        </div>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035262.png" alt="GPT Codex CLI" />
+        
+        <h2>🔍 为什么选择GPT Codex？</h2>
+        
+        <div class="step-guide">
+            <div class="step-number">1</div>
+            <strong>GPT-5 的编程能力绝对是当前第一梯队的。</strong>
+        </div>
+        
+        <div class="step-guide">
+            <div class="step-number">2</div>
+            <strong>Codex 几乎每天都会发布更新，OpenAI 官方高度重视。</strong>
+        </div>
+        
+        <div class="step-guide">
+            <div class="step-number">3</div>
+            <strong>Codex 最好的一点是，你可以以每月 20 美元的价格使用 gpt-5-thinking-high，而且很少达到使用上限。</strong>
+        </div>
+        
+        <div class="step-guide">
+            <div class="step-number">4</div>
+            <strong>越来越多的开发者开始转向 Codex，越来越多的好评，会促进官方投入更多的资源和精力，形成正反馈。</strong>
+        </div>
+        
+        <h2>📋 启动教程</h2>
+        
+        <h3>1️⃣ 网络配置</h3>
+        
+        <p>终端执行以下命令，确保可以正常访问 ChatGPT：</p>
+        
+        <pre><code>curl -I https://chatgpt.com</code></pre>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035369.png" alt="网络测试" />
+        
+        <div class="highlight-box">
+            <h4>⚠️ 如果卡在这一步</h4>
+            <p>原因可能是，没有将代理命令复制到终端。</p>
+            <p>首先确保 <code>curl ipinfo.io</code> 输出的结果符合预期，然后继续尝试解决 <code>curl -I https://chatgpt.com</code> 的连通性问题。</p>
+        </div>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035501.png" alt="网络问题示例" />
+        
+        <h3>2️⃣ 账号准备</h3>
+        
+        <p>请确保开通每月 20 美元的 ChatGPT Plus服务。</p>
+        
+        <div class="highlight-box">
+            <p>自助充值链接：<a href="https://717ka.com/p/9ezez0xoho8qe7u2w6q1roul" target="_blank" style="color: #ffd700; text-decoration: underline;">https://717ka.com/p/9ezez0xoho8qe7u2w6q1roul</a></p>
+        </div>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035731.png" alt="ChatGPT Plus" />
+        
+        <p>以目前的使用情况来看，每月20美元的套餐足够应付日常开发。至少对我来说，还很少会出现提示额度不足的情况。所以暂时不需要开通200美元套餐，毕竟使用的模型都是GPT-5，即使200美元套餐当前也不能在 Codex 里面使用 GPT-5 Pro。</p>
+        
+        <blockquote>
+            而且这里的次数消耗，丝毫不影响 ChatGPT 官方其他服务的使用，所以还是非常划算的。就算自己没有代码需求，用它来写文档也是非常划算的，该薅的羊毛就得薅。
+        </blockquote>
+        
+        <h3>3️⃣ CLI安装</h3>
+        
+        <p>地址：<a href="https://github.com/openai/codex" target="_blank">https://github.com/openai/codex</a></p>
+        
+        <p>可以使用以下三种方式完成安装：</p>
+        
+        <ul>
+            <li><code>npm install -g @openai/codex</code></li>
+            <li><code>brew install codex</code></li>
+            <li>直接下载 GitHub Releases</li>
+        </ul>
+        
+        <div class="highlight-box">
+            <p>📢 <strong>定期，最好是每天，重新执行下上述命令，确保使用最新版本。</strong></p>
+        </div>
+        
+        <p>如果你对版本（尤其是希望第一时间体验内测alpha版本），更推荐的是直接下载 GitHub Releases。</p>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035856.png" alt="GitHub Releases" />
+        
+        <p>点击下面的链接，会自动跳转到版本的 release 页面。</p>
+        
+        <p><a href="https://github.com/openai/codex/releases" target="_blank">https://github.com/openai/codex/releases</a></p>
+        
+        <p>找到你希望使用的版本，然后选择机器对应的可执行文件：</p>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035983.png" alt="版本选择" />
+        
+        <ul>
+            <li><code>aarch64</code> → Apple M 系列芯片</li>
+            <li><code>x86_64</code> → Intel/AMD 64 位 CPU</li>
+            <li><code>darwin</code> → macOS</li>
+            <li><code>pc-windows-msvc</code> → Windows</li>
+            <li><code>unknown-linux-gnu/musl</code> → Linux</li>
+        </ul>
+        
+        <p>下载、解压后，将可执行文件移动到 PATH 路径。</p>
+        
+        <p>以Apple M 系列为例，执行如下命令：</p>
+        
+        <pre><code># 下载
+gh release download --repo openai/codex --pattern 'codex-aarch64-apple-darwin.tar.gz'
+
+# 解压
+tar -xzf codex-aarch64-apple-darwin.tar.gz
+
+# 重命名
+mv codex-aarch64-apple-darwin codex
+
+# 移动到系统路径
+sudo mv codex /usr/local/bin/</code></pre>
+        
+        <p>虽然这种方式稍微有点繁琐，现在有 AI 其实很好解决... 封装一个快捷键即可。</p>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095040148.png" alt="AI辅助" />
+        
+        <p>简直丝滑！</p>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095040415.png" alt="丝滑体验" />
+        
+        <h3>4️⃣ 启动使用</h3>
+        
+        <p>输入 <code>codex</code>，选择使用 ChatGPT 账户登录。</p>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095040757.png" alt="启动界面" />
+        
+        <p>完成授权之后即可登录。</p>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095041207.png" alt="登录成功" />
+        
+        <h3>5️⃣ 测试验证</h3>
+        
+        <p>输入一个最简单的"hello"，如果收到回复，说明启动成功！</p>
+        
+        <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095041466.png" alt="测试成功" />
+        
+        <div class="highlight-box">
+            <h2>🎉 恭喜！GPT Codex CLI 配置完成！</h2>
+            <p>现在您可以开始使用 OpenAI 最先进的 AI 编程助手了。</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌞 AI特惠中心</h3>
+                    <p>专业的AI工具订阅服务平台</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <a href="index.html">首页</a>
+                    <a href="gpt-codex.html">GPT Codex</a>
+                    <a href="readme.html">使用指南</a>
+                    <a href="#contact">联系我们</a>
+                </div>
+                <div class="footer-section">
+                    <h4>服务时间</h4>
+                    <p>周一至周日 09:00-23:00</p>
+                    <p>节假日正常服务</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI特惠中心. All rights reserved.</p>
+                <p>最后更新时间：2025年7月1日</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

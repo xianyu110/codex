@@ -1,0 +1,56 @@
+# GitHub Pages 配置文件 - AI特惠中心
+title: "🌞 暑期AI产品特惠中心"
+description: "ChatGPT/Claude/Grok镜像站优惠券，暑期特惠9折，AI工具订阅服务平台"
+url: "https://xianyu110.github.io"
+baseurl: "/codex"
+
+# SEO 优化
+lang: zh-CN
+author: "AI特惠中心"
+keywords: "AI, ChatGPT, Claude, Grok, 优惠券, 暑期特惠, AI工具, 镜像站"
+
+# 插件配置 (如果使用Jekyll)
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+
+# 集合设置
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# 排除文件
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - node_modules/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - "*.gemspec"
+  - .gitignore
+  - .git/
+  - .DS_Store
+  - "**/.*"
+  - "*.tmp"
+  - "*.bak"
+
+# 包含文件
+include:
+  - _pages
+
+# 默认设置
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      author: "AI特惠中心"
