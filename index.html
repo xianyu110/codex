@@ -3,248 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>🌞 暑期AI产品特惠中心 - ChatGPT/Claude/Grok优惠券</title>
-    <meta name="title" content="🌞 暑期AI产品特惠中心 - ChatGPT/Claude/Grok优惠券">
-    <meta name="description" content="暑期AI产品特惠中心，ChatGPT/Claude/Grok镜像站优惠券，最高9折优惠。学生专属福利，限时抢购，AI工具订阅服务平台。">
-    <meta name="keywords" content="AI, ChatGPT, Claude, Grok, 优惠券, 暑期特惠, 镜像站, AI工具, 学生优惠, 编程工具">
-    <meta name="author" content="AI特惠中心">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="GPT Codex CLI完全使用指南 - OpenAI最新AI编程工具教程">
+    <meta name="keywords" content="GPT Codex, OpenAI, AI编程, CLI工具, 教程, ChatGPT">
+    <meta name="author" content="AI编程助手">
+    <meta property="og:title" content="GPT Codex CLI完全使用指南">
+    <meta property="og:description" content="OpenAI最新AI编程工具Codex CLI完整教程">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xianyu110.github.io/codex/">
-    <meta property="og:title" content="🌞 暑期AI产品特惠中心">
-    <meta property="og:description" content="ChatGPT/Claude/Grok镜像站优惠券，暑期特惠9折，学生专属福利">
-    <meta property="og:image" content="https://xianyu110.github.io/codex/og-image.jpg">
-    <meta property="og:site_name" content="AI特惠中心">
-    <meta property="og:locale" content="zh_CN">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://xianyu110.github.io/codex/">
-    <meta property="twitter:title" content="🌞 暑期AI产品特惠中心">
-    <meta property="twitter:description" content="ChatGPT/Claude/Grok镜像站优惠券，暑期特惠9折，学生专属福利">
-    <meta property="twitter:image" content="https://xianyu110.github.io/codex/og-image.jpg">
-    
-    <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#2563eb">
-    <meta name="msapplication-TileColor" content="#2563eb">
-    <meta name="application-name" content="AI特惠中心">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://xianyu110.github.io/codex/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
-    <!-- Fonts -->
+    <title>GPT Codex CLI完全使用指南 - OpenAI编程助手</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "AI特惠中心",
-        "description": "暑期AI产品特惠中心，ChatGPT/Claude/Grok镜像站优惠券",
-        "url": "https://xianyu110.github.io/codex/",
-        "author": {
-            "@type": "Organization",
-            "name": "AI特惠中心"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "AI特惠中心"
-        },
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://xianyu110.github.io/codex/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-        },
-        "offers": [
-            {
-                "@type": "Offer",
-                "name": "暑期9折券",
-                "description": "全场月卡套餐9折优惠",
-                "price": "9",
-                "priceCurrency": "CNY",
-                "availability": "https://schema.org/InStock",
-                "validFrom": "2025-08-01",
-                "validThrough": "2025-08-31"
-            },
-            {
-                "@type": "Offer", 
-                "name": "夏日畅学券",
-                "description": "ChatGPT/Claude/Grok月卡9折",
-                "price": "9",
-                "priceCurrency": "CNY",
-                "availability": "https://schema.org/InStock",
-                "validFrom": "2025-08-01",
-                "validThrough": "2025-08-31"
-            }
-        ]
-    }
-    </script>
-    
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .codex-header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .codex-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .codex-header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .reason-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .reason-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .reason-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .tutorial-section {
+            background: #f8fafc;
+            padding: 80px 0;
+        }
+        
+        .step-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 4px solid #10b981;
+        }
+        
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .step-number-large {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .code-block {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        
+        .code-block code {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9em;
+        }
+        
+        .highlight-note {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .highlight-note h4 {
+            color: #92400e;
+            margin-bottom: 10px;
+        }
+        
+        .highlight-note p {
+            color: #78350f;
+            margin: 0;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .pricing-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-card p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .codex-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .codex-header p {
+                font-size: 1.1rem;
+            }
+            
+            .reasons-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .step-card {
+                padding: 20px;
+            }
+            
+            .step-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <h1>🌞 AI特惠中心</h1>
+                <h1>🚀 GPT Codex</h1>
             </div>
             <div class="nav-links">
-                <a href="index.html">首页</a>
-                <a href="gpt-codex.html">GPT Codex</a>
-                <a href="readme.html">使用指南</a>
-                <a href="#pricing">优惠券</a>
-                <a href="#features">功能特点</a>
-                <a href="#pricing">优惠券</a>
+                <a href="#features">为什么选择</a>
                 <a href="#tutorial">使用教程</a>
+                <a href="#pricing">订阅服务</a>
                 <a href="#contact">联系我们</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    专业AI编程指南<br>
-                    <span class="highlight-text">GPT Codex + Claude Code</span>
-                </h1>
-                
-                <div class="hero-features">
-                    <div class="feature-item">🚀 GPT Codex CLI教程</div>
-                    <div class="feature-item">💎 Claude Code使用指南</div>
-                    <div class="feature-item">🌟 多种使用方案</div>
-                </div>
-                
-                <h1 class="hero-title">
-                    暑期AI产品<br>
-                    <span class="highlight-text">特惠狂欢</span>
-                </h1>
-                <p class="hero-subtitle">
-                    ChatGPT/Claude/Grok镜像站优惠券，最高9折优惠<br>
-                    学生专属福利，限时抢购
-                </p>
-                <div class="hero-buttons">
-                    <a href="gpt-codex.html" class="btn btn-primary">GPT Codex教程</a>
-                    <a href="readme.html" class="btn btn-secondary">Claude Code指南</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Guide Links Section -->
-    <section class="guide-links-section">
+    <!-- Header Section -->
+    <section class="codex-header">
         <div class="container">
-            <div class="section-header">
-                <h2>📚 专业教程指南</h2>
-                <p>掌握最新AI编程工具的使用方法</p>
-            </div>
-            <div class="guide-links-grid">
-                <a href="gpt-codex.html" class="guide-link-card">
-                    <div class="guide-link-icon">🚀</div>
-                    <div class="guide-link-content">
-                        <h3>GPT Codex CLI教程</h3>
-                        <p>OpenAI最新AI编程工具Codex CLI完整使用指南</p>
-                    </div>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-                <a href="readme.html" class="guide-link-card">
-                    <div class="guide-link-icon">💎</div>
-                    <div class="guide-link-content">
-                        <h3>Claude Code使用指南</h3>
-                        <p>三种方式解锁最强AI编程助手完整教程</p>
-                    </div>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Announcement Banner -->
-    <div class="hero-buttons">
-                    <a href="#pricing" class="btn btn-primary">立即抢券</a>
-                    <a href="#tutorial" class="btn btn-secondary">查看教程</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="floating-card">
-                    <div class="discount-badge">9折</div>
-                    <h3>暑期特惠</h3>
-                    <p>全场月卡套餐</p>
-                </div>
-            </div>
-        </div>
-    <div class="guide-links-grid">
-                <a href="gpt-codex.html" class="guide-link-card">
-                    <div class="guide-link-icon">🚀</div>
-                    <h3>GPT Codex CLI教程</h3>
-                    <p>OpenAI最新AI编程工具Codex CLI完整使用指南</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-                <a href="readme.html" class="guide-link-card">
-                    <div class="guide-link-icon">💎</div>
-                    <h3>Claude Code使用指南</h3>
-                    <p>三种方式解锁最强AI编程助手完整教程</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Announcement Banner -->
-    <section class="announcement">
-        <div class="container">
-            <div class="announcement-content">
-                <div class="announcement-item">
-                    <span class="announcement-icon">🚀</span>
-                    <div>
-                        <h4>Grok4已上线</h4>
-                        <p>超强性能全球领先，马斯克再度升级Grok模型</p>
-                    </div>
-                </div>
-                <div class="announcement-item">
-                    <span class="announcement-icon">🎨</span>
-                    <div>
-                        <h4>绘画功能更新</h4>
-                        <p>需要输入斜杠 / 触发绘画按钮</p>
-                    </div>
-                </div>
-                <div class="announcement-item">
-                    <span class="announcement-icon">🔗</span>
-                    <div>
-                        <h4>备用入口</h4>
-                        <p>遇到问题可换备用入口：vlink.cc/maynorai</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="guide-links-grid">
-                <a href="gpt-codex.html" class="guide-link-card">
-                    <div class="guide-link-icon">🚀</div>
-                    <h3>GPT Codex CLI教程</h3>
-                    <p>OpenAI最新AI编程工具Codex CLI完整使用指南</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-                <a href="readme.html" class="guide-link-card">
-                    <div class="guide-link-icon">💎</div>
-                    <h3>Claude Code使用指南</h3>
-                    <p>三种方式解锁最强AI编程助手完整教程</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-            </div>
+            <h1>GPT Codex CLI</h1>
+            <p>OpenAI最新AI编程工具 - 每月20美元解锁GPT-5编程能力</p>
+            <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035262.png" alt="GPT Codex" style="max-width: 100%; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.2);" />
         </div>
     </section>
 
@@ -252,244 +243,183 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2>为什么选择我们？</h2>
-                <p>专业AI工具订阅服务，安全稳定有保障</p>
+                <h2>为什么选择GPT Codex？</h2>
+                <p>Anthropic全面禁止Claude模型在中国渠道使用，Codex将成为您的最佳选择</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>快速充值</h3>
-                    <p>即时到账，支持多种支付方式，充值成功率99.9%</p>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-number">1</div>
+                    <h3>GPT-5编程能力第一梯队</h3>
+                    <p>使用OpenAI最先进的GPT-5模型，编程能力绝对领先，提供无与伦比的代码生成和重构体验。</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>安全可靠</h3>
-                    <p>采用银行级加密技术，保护您的账户和支付信息安全</p>
+                <div class="reason-card">
+                    <div class="reason-number">2</div>
+                    <h3>每日更新，官方高度重视</h3>
+                    <p>Codex几乎每天都会发布更新，OpenAI官方投入大量资源，确保您始终使用最新版本。</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>价格实惠</h3>
-                    <p>官方定价，拒绝中间商赚差价，让您用更少的钱享受更好的服务</p>
+                <div class="reason-card">
+                    <div class="reason-number">3</div>
+                    <h3>性价比超高</h3>
+                    <p>每月仅需20美元即可使用gpt-5-thinking-high模型，而且很少达到使用上限，是不可错过的AI编程利器。</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">��</div>
-                    <h3>专业客服</h3>
-                    <p>7×24小时在线客服，专业团队为您解决各种问题</p>
+                <div class="reason-card">
+                    <div class="reason-number">4</div>
+                    <h3>开发者口碑爆发</h3>
+                    <p>越来越多的开发者开始转向Codex，良好的用户体验和不断增长的社区支持，形成强大的正反馈。</p>
                 </div>
-            </div>
-        </div>
-    <div class="guide-links-grid">
-                <a href="gpt-codex.html" class="guide-link-card">
-                    <div class="guide-link-icon">🚀</div>
-                    <h3>GPT Codex CLI教程</h3>
-                    <p>OpenAI最新AI编程工具Codex CLI完整使用指南</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-                <a href="readme.html" class="guide-link-card">
-                    <div class="guide-link-icon">💎</div>
-                    <h3>Claude Code使用指南</h3>
-                    <p>三种方式解锁最强AI编程助手完整教程</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>暑期优惠券</h2>
-                <p>限时抢购，错过再等一年</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card featured">
-                    <div class="pricing-header">
-                        <h3>🌞 暑期9折券</h3>
-                        <div class="price">SUMMER_SPECIAL</div>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature">✅ 全场月卡套餐9折</div>
-                        <div class="feature">✅ 包含ChatGPT Plus</div>
-                        <div class="feature">✅ 包含Claude Pro/Max</div>
-                        <div class="feature">✅ 包含Super Grok</div>
-                    </div>
-                    <button class="btn btn-primary" onclick="copyCode('SUMMER_SPECIAL')">复制优惠码</button>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>🏖️ 夏日畅学券</h3>
-                        <div class="price">SUMMER_LEARN</div>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature">✅ 月卡套餐9折</div>
-                        <div class="feature">✅ 学生专属优惠</div>
-                        <div class="feature">✅ 学习季特惠</div>
-                    </div>
-                    <button class="btn btn-secondary" onclick="copyCode('SUMMER_LEARN')">复制优惠码</button>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>🌟 新用户券</h3>
-                        <div class="price">SUMMER_NEW</div>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature">✅ 首购9折优惠</div>
-                        <div class="feature">✅ 新用户专享</div>
-                        <div class="feature">✅ 限量发放</div>
-                    </div>
-                    <button class="btn btn-secondary" onclick="copyCode('SUMMER_NEW')">复制优惠码</button>
-                </div>
-            </div>
-        </div>
-    <div class="guide-links-grid">
-                <a href="gpt-codex.html" class="guide-link-card">
-                    <div class="guide-link-icon">🚀</div>
-                    <h3>GPT Codex CLI教程</h3>
-                    <p>OpenAI最新AI编程工具Codex CLI完整使用指南</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-                <a href="readme.html" class="guide-link-card">
-                    <div class="guide-link-icon">💎</div>
-                    <h3>Claude Code使用指南</h3>
-                    <p>三种方式解锁最强AI编程助手完整教程</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Purchase Links -->
-    <section class="purchase-links">
-        <div class="container">
-            <div class="section-header">
-                <h2>官方购买地址</h2>
-            </div>
-            <div class="links-grid">
-                <a href="https://agi.maynor1024.live/list/#/shop" class="link-card" target="_blank" rel="noopener noreferrer">
-                    <div class="link-icon">🛒</div>
-                    <div class="link-content">
-                        <h3>官方商城</h3>
-                        <p>https://agi.maynor1024.live/list/#/shop</p>
-                    </div>
-                    <div class="link-arrow">→</div>
-                </a>
-                <a href="https://apipro.maynor1024.live/" class="link-card" target="_blank" rel="noopener noreferrer">
-                    <div class="link-icon">💱</div>
-                    <div class="link-content">
-                        <h3>API商城 (1元/美刀)</h3>
-                        <p>https://apipro.maynor1024.live/</p>
-                    </div>
-                    <div class="link-arrow">→</div>
-                </a>
-            </div>
-        </div>
-    <div class="guide-links-grid">
-                <a href="gpt-codex.html" class="guide-link-card">
-                    <div class="guide-link-icon">🚀</div>
-                    <h3>GPT Codex CLI教程</h3>
-                    <p>OpenAI最新AI编程工具Codex CLI完整使用指南</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-                <a href="readme.html" class="guide-link-card">
-                    <div class="guide-link-icon">💎</div>
-                    <h3>Claude Code使用指南</h3>
-                    <p>三种方式解锁最强AI编程助手完整教程</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Tutorial Section -->
-    <section id="tutorial" class="tutorial">
+    <section id="tutorial" class="tutorial-section">
         <div class="container">
             <div class="section-header">
-                <h2>使用教程</h2>
-                <p>简单3步，快速开始使用</p>
+                <h2>🚀 启动教程</h2>
+                <p>5步快速开始使用GPT Codex CLI</p>
             </div>
-            <div class="tutorial-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>选择优惠券</h3>
-                        <p>在上方选择适合您的优惠券，点击复制优惠码</p>
-                    </div>
+            
+            <!-- Step 1: Network -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number-large">1</div>
+                    <h2 class="step-title">网络配置</h2>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>前往购买</h3>
-                        <p>点击官方购买链接，系统会自动跳转并应用优惠码</p>
-                    </div>
+                <p>首先确保您可以正常访问ChatGPT服务：</p>
+                <div class="code-block">
+                    <code>curl -I https://chatgpt.com</code>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>完成支付</h3>
-                        <p>选择支付方式完成购买，服务立即生效</p>
-                    </div>
+                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035369.png" alt="网络测试" />
+                
+                <div class="highlight-note">
+                    <h4>⚠️ 如果卡在这一步</h4>
+                    <p>原因可能是没有将代理命令复制到终端。首先确保 <code>curl ipinfo.io</code> 输出的结果符合预期，然后继续尝试解决 <code>curl -I https://chatgpt.com</code> 的连通性问题。</p>
                 </div>
+                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035501.png" alt="网络问题示例" />
             </div>
-        </div>
-    <div class="guide-links-grid">
-                <a href="gpt-codex.html" class="guide-link-card">
-                    <div class="guide-link-icon">🚀</div>
-                    <h3>GPT Codex CLI教程</h3>
-                    <p>OpenAI最新AI编程工具Codex CLI完整使用指南</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-                <a href="readme.html" class="guide-link-card">
-                    <div class="guide-link-icon">💎</div>
-                    <h3>Claude Code使用指南</h3>
-                    <p>三种方式解锁最强AI编程助手完整教程</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
+            
+            <!-- Step 2: Account -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number-large">2</div>
+                    <h2 class="step-title">账号准备</h2>
+                </div>
+                <p>请确保开通每月20美元的ChatGPT Plus服务：</p>
+                <div class="highlight-note">
+                    <p>🎯 <strong>自助充值链接：</strong><a href="https://717ka.com/p/9ezez0xoho8qe7u2w6q1roul" target="_blank" style="color: #1e40af;">https://717ka.com/p/9ezez0xoho8qe7u2w6q1roul</a></p>
+                </div>
+                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035731.png" alt="ChatGPT Plus" />
+                
+                <p>每月20美元的套餐足够应付日常开发使用，很少会出现额度不足的情况。而且这里的使用次数不会影响ChatGPT官方其他服务，是非常划算的选择。</p>
+                
+                <blockquote style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 20px; margin: 20px 0; border-radius: 8px;">
+                    💡 <strong>提示：</strong>就算您没有代码开发需求，用GPT Codex来写文档也是非常划算的！该薅的羊毛一定要薅。
+                </blockquote>
+            </div>
+            
+            <!-- Step 3: Installation -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number-large">3</div>
+                    <h2 class="step-title">CLI安装</h2>
+                </div>
+                <p><strong>项目地址：</strong><a href="https://github.com/openai/codex" target="_blank">https://github.com/openai/codex</a></p>
+                
+                <p>可以使用以下三种方式完成安装：</p>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li><code>npm install -g @openai/codex</code></li>
+                    <li><code>brew install codex</code></li>
+                    <li>直接下载GitHub Releases</li>
+                </ul>
+                
+                <div class="highlight-note">
+                    <h4>📢 重要提醒</h4>
+                    <p>定期（最好每天）重新执行上述命令，确保使用最新版本。</p>
+                </div>
+                
+                <p>如果你对版本有特殊要求（尤其是希望第一时间体验内测alpha版本），更推荐直接下载GitHub Releases。</p>
+                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035856.png" alt="GitHub Releases" />
+                
+                <p><a href="https://github.com/openai/codex/releases" target="_blank" class="cta-button">前往下载 Releases</a></p>
+                
+                <p>选择适合您机器的可执行文件：</p>
+                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035983.png" alt="版本选择" />
+                
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li><code>aarch64</code> → Apple M 系列芯片</li>
+                    <li><code>x86_64</code> → Intel/AMD 64 位 CPU</li>
+                    <li><code>darwin</code> → macOS</li>
+                    <li><code>pc-windows-msvc</code> → Windows</li>
+                    <li><code>unknown-linux-gnu/musl</code> → Linux</li>
+                </ul>
+                
+                <p><strong>以Apple M系列为例的安装命令：</strong></p>
+                <div class="code-block">
+                    <code># 下载指定版本
+gh release download --repo openai/codex --pattern 'codex-aarch64-apple-darwin.tar.gz'
+
+# 解压文件
+tar -xzf codex-aarch64-apple-darwin.tar.gz
+
+# 重命名
+mv codex-aarch64-apple-darwin codex
+
+# 移动到系统路径
+sudo mv codex /usr/local/bin/</code>
+                </div>
+                
+                <p>虽然这种方式稍微繁琐一些，但现在有了AI的帮助，其实很好解决... 甚至可以封装一个快捷键！</p>
+                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095040148.png" alt="AI辅助" />
+                
+                <p>简直丝滑！</p>
+                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095040415.png" alt="丝滑体验" />
+            </div>
+            
+            <!-- Step 4: Launch -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number-large">4</div>
+                    <h2 class="step-title">启动使用</h2>
+                </div>
+                <p>在终端输入以下命令启动Codex：</p>
+                <div class="code-block">
+                    <code>codex</code>
+                </div>
+                
+                <p>选择使用ChatGPT账户登录：</p>
+                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095040757.png" alt="启动界面" />
+                
+                <p>完成授权之后即可登录成功：</p>
+                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095041207.png" alt="登录成功" />
+            </div>
+            
+            <!-- Step 5: Test -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number-large">5</div>
+                    <h2 class="step-title">测试验证</h2>
+                </div>
+                <p>输入一个最简单的"hello"，如果收到回复，说明启动成功！</p>
+                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095041466.png" alt="测试成功" />
+                
+                <div style="text-align: center; margin: 30px 0;">
+                    <div style="background: linear-gradient(45deg, #10b981, #059669); color: white; padding: 30px; border-radius: 16px; display: inline-block;">
+                        <h3 style="margin: 0; font-size: 1.8rem;">🎉 恭喜！GPT Codex配置完成！</h3>
+                        <p style="margin: 10px 0 0 0; opacity: 0.9;">现在您可以开始使用OpenAI最先进的AI编程助手了！</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
         <div class="container">
-            <div class="section-header">
-                <h2>联系我们</h2>
-                <p>有任何问题都可以联系我们</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">💬</div>
-                    <h3>微信客服</h3>
-                    <p>coder-maynor</p>
-                    <small>24小时在线，快速响应</small>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">🎁</div>
-                    <h3>优惠咨询</h3>
-                    <p>更多优惠券领取方式</p>
-                    <small>联系客服获取更多优惠</small>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h3>技术支持</h3>
-                    <p>遇到问题及时解决</p>
-                    <small>专业技术团队为您服务</small>
-                </div>
-            </div>
-        </div>
-    <div class="guide-links-grid">
-                <a href="gpt-codex.html" class="guide-link-card">
-                    <div class="guide-link-icon">🚀</div>
-                    <h3>GPT Codex CLI教程</h3>
-                    <p>OpenAI最新AI编程工具Codex CLI完整使用指南</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
-                <a href="readme.html" class="guide-link-card">
-                    <div class="guide-link-icon">💎</div>
-                    <h3>Claude Code使用指南</h3>
-                    <p>三种方式解锁最强AI编程助手完整教程</p>
-                    <div class="guide-link-arrow">→</div>
-                </a>
+            <h2>💰 订阅服务</h2>
+            <div class="pricing-card">
+                <h3>ChatGPT Plus</h3>
+                <p>每月仅需20美元，即可解锁GPT-5编程能力的全部潜力</p>
+                <a href="https://717ka.com/p/9ezez0xoho8qe7u2w6q1roul" target="_blank" class="cta-button">立即订阅</a>
             </div>
         </div>
     </section>
@@ -499,41 +429,29 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>🌞 AI特惠中心</h3>
-                    <p>专业的AI工具订阅服务平台</p>
+                    <h3>🚀 GPT Codex</h3>
+                    <p>OpenAI最新AI编程工具</p>
                 </div>
                 <div class="footer-section">
                     <h4>快速链接</h4>
-                    <a href="#features">功能特点</a>
-                    <a href="#pricing">优惠券</a>
+                    <a href="#features">为什么选择</a>
                     <a href="#tutorial">使用教程</a>
+                    <a href="#pricing">订阅服务</a>
                     <a href="#contact">联系我们</a>
                 </div>
                 <div class="footer-section">
-                    <h4>服务时间</h4>
-                    <p>周一至周日 09:00-23:00</p>
-                    <p>节假日正常服务</p>
+                    <h4>技术支持</h4>
+                    <p>微信：coder-maynor</p>
+                    <p>QQ：1002569303</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 AI特惠中心. All rights reserved.</p>
+                <p>&copy; 2025 GPT Codex. All rights reserved.</p>
                 <p>最后更新时间：2025年7月1日</p>
             </div>
         </div>
     </footer>
 
-    <!-- Modal -->
-    <div id="message-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="modal-message" class="modal-body"></div>
-        </div>
-    </div>
-
-    <!-- Scripts -->
     <script src="script.js"></script>
-    
-    <!-- Analytics (optional) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script> -->
 </body>
 </html>
