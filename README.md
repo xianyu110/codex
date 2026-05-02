@@ -29,10 +29,13 @@ Codex Desktop App 下载方法
 1 Mac 用户
 官方 macOS 下载链接：
 https://persistent.oaistatic.com/codex-app-prod/Codex.dmg
+
 2 Windows 用户
-Windows 用户可以通过微软商店下载安装。
+
+Windows 用户可以通过微软商店下载安装或者下载本地安装包。
 本地安装包：
 https://pan.quark.cn/s/0f1763fe2ac9?pwd=rTQw
+
 ---
 
 ## 为什么要做 Codex 国内站？
