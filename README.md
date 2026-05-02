@@ -26,6 +26,7 @@ https://codex.chatgpt-plus.top/login
 https://maynorai.jichiyun.sbs/buy/30
 
 Codex Desktop App 下载方法
+
 1 Mac 用户
 官方 macOS 下载链接：
 https://persistent.oaistatic.com/codex-app-prod/Codex.dmg
