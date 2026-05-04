@@ -3,454 +3,783 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GPT Codex CLI完全使用指南 - OpenAI最新AI编程工具教程">
-    <meta name="keywords" content="GPT Codex, OpenAI, AI编程, CLI工具, 教程, ChatGPT">
-    <meta name="author" content="AI编程助手">
-    <meta property="og:title" content="GPT Codex CLI完全使用指南">
-    <meta property="og:description" content="OpenAI最新AI编程工具Codex CLI完整教程">
+    <meta name="description" content="Codex 国内站正式上线，无需魔法、无需海外手机号，一半价格使用 GPT-5.5、GPTimage2、Codex 编程 Agent 和图像生成能力。">
+    <meta name="keywords" content="Codex 国内站,GPT-5.5,GPTimage2,Codex Desktop App,AI编程,AI Agent">
+    <meta name="author" content="Codex 国内站">
+    <meta property="og:title" content="Codex 国内站正式上线">
+    <meta property="og:description" content="无需魔法、无需海外手机号，一半价格用上 GPT-5.5 和 GPTimage2。">
     <meta property="og:type" content="website">
-    <title>GPT Codex CLI完全使用指南 - OpenAI编程助手</title>
+    <title>Codex 国内站正式上线 | GPT-5.5 与 GPTimage2 一站式入口</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Cpath d='M18 33 31 18l15 8-13 15-15-8Z' fill='none' stroke='white' stroke-width='5' stroke-linejoin='round'/%3E%3Cpath d='M24 45h16' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .codex-header {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
+        :root {
+            --ink: #101828;
+            --muted: #5f6c7b;
+            --line: #dbe4ee;
+            --surface: #ffffff;
+            --soft: #f5f7fb;
+            --brand: #0f766e;
+            --brand-dark: #115e59;
+            --blue: #2563eb;
+            --amber: #f59e0b;
+            --danger-soft: #fff7ed;
         }
-        
-        .codex-header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 700;
+
+        body {
+            color: var(--ink);
+            background: #fbfcfe;
         }
-        
-        .codex-header p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto;
+
+        .navbar {
+            position: sticky;
         }
-        
-        .reasons-grid {
+
+        .nav-brand h1 {
+            color: var(--brand-dark);
+            letter-spacing: 0;
+        }
+
+        .nav-links a:hover,
+        .footer-section a:hover {
+            color: var(--brand);
+        }
+
+        .nav-links a::after {
+            background: var(--brand);
+        }
+
+        .hero-domestic {
+            padding: 96px 0 72px;
+            background:
+                radial-gradient(circle at 80% 16%, rgba(37, 99, 235, 0.13), transparent 32%),
+                linear-gradient(135deg, #ecfdf5 0%, #eff6ff 54%, #fff7ed 100%);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .hero-layout {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+            grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+            gap: 48px;
+            align-items: center;
         }
-        
-        .reason-card {
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .reason-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .reason-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #10b981, #059669);
-            color: white;
-            border-radius: 50%;
+
+        .eyebrow {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(15, 118, 110, 0.1);
+            color: var(--brand-dark);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 22px;
         }
-        
-        .tutorial-section {
-            background: #f8fafc;
-            padding: 80px 0;
+
+        .hero-domestic h1 {
+            font-size: clamp(2.45rem, 5vw, 4.7rem);
+            line-height: 1.08;
+            letter-spacing: 0;
+            margin-bottom: 22px;
         }
-        
-        .step-card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            margin: 30px 0;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border-left: 4px solid #10b981;
+
+        .hero-domestic h1 span {
+            color: var(--brand);
         }
-        
-        .step-header {
+
+        .hero-lead {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 720px;
+            margin-bottom: 28px;
+        }
+
+        .hero-actions,
+        .card-actions {
             display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 28px;
         }
-        
-        .step-number-large {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(45deg, #10b981, #059669);
-            color: white;
+
+        .btn {
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background: var(--brand);
+            box-shadow: 0 14px 30px rgba(15, 118, 110, 0.22);
+        }
+
+        .btn-primary:hover {
+            background: var(--brand-dark);
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: var(--brand-dark);
+            border: 1px solid var(--line);
+            backdrop-filter: none;
+        }
+
+        .btn-secondary:hover {
+            background: #f8fafc;
+            border-color: var(--brand);
+        }
+
+        .proof-strip {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .proof-item {
+            padding: 14px 16px;
+            border: 1px solid rgba(15, 118, 110, 0.18);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.72);
+        }
+
+        .proof-item strong {
+            display: block;
+            color: var(--brand-dark);
+            font-size: 1.05rem;
+        }
+
+        .proof-item span {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .product-panel {
+            background: rgba(255, 255, 255, 0.86);
+            border: 1px solid rgba(148, 163, 184, 0.28);
+            border-radius: 22px;
+            box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+            overflow: hidden;
+        }
+
+        .panel-top {
+            display: flex;
+            gap: 8px;
+            padding: 16px;
+            background: #0f172a;
+        }
+
+        .panel-dot {
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-right: 20px;
-            flex-shrink: 0;
+            background: #ef4444;
         }
-        
-        .step-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1f2937;
+
+        .panel-dot:nth-child(2) {
+            background: #f59e0b;
         }
-        
-        .code-block {
-            background: #1f2937;
-            color: #f9fafb;
+
+        .panel-dot:nth-child(3) {
+            background: #10b981;
+        }
+
+        .panel-body {
+            padding: 28px;
+        }
+
+        .panel-status {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .panel-status span {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .panel-status strong {
+            display: block;
+            margin-top: 4px;
+        }
+
+        .terminal-card {
+            background: #101828;
+            color: #e5e7eb;
+            border-radius: 14px;
             padding: 20px;
-            border-radius: 12px;
-            margin: 20px 0;
-            overflow-x: auto;
+            font-family: Monaco, Menlo, Consolas, monospace;
+            font-size: 0.9rem;
+            line-height: 1.7;
         }
-        
-        .code-block code {
-            font-family: 'Monaco', 'Menlo', monospace;
-            font-size: 0.9em;
+
+        .terminal-card .accent {
+            color: #5eead4;
         }
-        
-        .highlight-note {
-            background: #fef3c7;
-            border: 1px solid #f59e0b;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
+
+        .terminal-card .dim {
+            color: #98a2b3;
         }
-        
-        .highlight-note h4 {
-            color: #92400e;
+
+        .section-band {
+            padding: 82px 0;
+        }
+
+        .section-band.alt {
+            background: var(--soft);
+        }
+
+        .section-header p {
+            max-width: 760px;
+        }
+
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .entry-card,
+        .pain-card,
+        .capability-card,
+        .faq-card,
+        .comparison-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        }
+
+        .entry-card {
+            padding: 28px;
+        }
+
+        .entry-card h3,
+        .pain-card h3,
+        .capability-card h3,
+        .faq-card h3,
+        .comparison-card h3 {
+            font-size: 1.22rem;
             margin-bottom: 10px;
         }
-        
-        .highlight-note p {
-            color: #78350f;
-            margin: 0;
+
+        .entry-card p,
+        .pain-card p,
+        .capability-card p,
+        .faq-card p,
+        .comparison-card p {
+            color: var(--muted);
+            margin-bottom: 18px;
         }
-        
-        .pricing-section {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-        
-        .pricing-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 40px;
-            max-width: 500px;
-            margin: 0 auto;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .pricing-card h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        
-        .pricing-card p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
-        
-        .cta-button {
-            background: #10b981;
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
+
+        .plain-link {
+            color: var(--brand-dark);
+            font-weight: 700;
             text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
+            word-break: break-all;
         }
-        
-        .cta-button:hover {
-            background: #059669;
-            transform: translateY(-2px);
+
+        .plain-link:hover {
+            text-decoration: underline;
         }
-        
-        @media (max-width: 768px) {
-            .codex-header h1 {
-                font-size: 2.2rem;
-            }
-            
-            .codex-header p {
-                font-size: 1.1rem;
-            }
-            
-            .reasons-grid {
+
+        .pain-grid,
+        .capability-grid,
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .pain-card,
+        .capability-card,
+        .faq-card,
+        .comparison-card {
+            padding: 26px;
+        }
+
+        .pain-card {
+            border-left: 5px solid var(--amber);
+        }
+
+        .capability-card {
+            border-left: 5px solid var(--brand);
+        }
+
+        .tag-list,
+        .check-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .tag-list span,
+        .check-list span {
+            display: inline-flex;
+            align-items: center;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: #eef6ff;
+            color: #1d4ed8;
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        .check-list span {
+            background: #ecfdf5;
+            color: var(--brand-dark);
+        }
+
+        .flow {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .flow-step {
+            position: relative;
+            padding: 22px 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+        }
+
+        .flow-step strong {
+            display: block;
+            color: var(--brand-dark);
+            margin-bottom: 8px;
+        }
+
+        .flow-step span {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .comparison-card.highlight {
+            border-color: rgba(15, 118, 110, 0.45);
+            box-shadow: 0 18px 45px rgba(15, 118, 110, 0.12);
+        }
+
+        .notice {
+            margin-top: 24px;
+            padding: 18px 20px;
+            border-radius: 14px;
+            background: var(--danger-soft);
+            border: 1px solid #fed7aa;
+            color: #9a3412;
+        }
+
+        .cta-section {
+            padding: 76px 0;
+            background: linear-gradient(135deg, #0f766e 0%, #1d4ed8 100%);
+            color: #fff;
+        }
+
+        .cta-box {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 12px;
+        }
+
+        .cta-box p {
+            color: rgba(255, 255, 255, 0.84);
+            font-size: 1.1rem;
+        }
+
+        .cta-box .btn-secondary {
+            color: #0f172a;
+        }
+
+        .footer {
+            background: #101828;
+        }
+
+        @media (max-width: 960px) {
+            .hero-layout,
+            .cta-box {
                 grid-template-columns: 1fr;
             }
-            
-            .step-card {
-                padding: 20px;
+
+            .quick-links,
+            .comparison-grid,
+            .flow {
+                grid-template-columns: 1fr;
             }
-            
-            .step-header {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
+
+            .product-panel {
+                max-width: 640px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-domestic {
+                padding: 74px 0 52px;
+            }
+
+            .proof-strip,
+            .pain-grid,
+            .capability-grid,
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-band {
+                padding: 62px 0;
+            }
+
+            .nav-brand h1 {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <h1>🚀 GPT Codex</h1>
+                <h1>Codex 国内站</h1>
             </div>
             <div class="nav-links">
-                <a href="#features">为什么选择</a>
-                <a href="#tutorial">使用教程</a>
-                <a href="#pricing">订阅服务</a>
-                <a href="#contact">联系我们</a>
+                <a href="#entry">入口</a>
+                <a href="#why">为什么做</a>
+                <a href="#capabilities">能力</a>
+                <a href="#flow">流程</a>
+                <a href="#faq">FAQ</a>
             </div>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <section class="codex-header">
-        <div class="container">
-            <h1>GPT Codex CLI</h1>
-            <p>OpenAI最新AI编程工具 - 每月20美元解锁GPT-5编程能力</p>
-            <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035262.png" alt="GPT Codex" style="max-width: 100%; border-radius: 12px; margin: 30px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.2);" />
-        </div>
-    </section>
+    <main>
+        <section class="hero-domestic">
+            <div class="container hero-layout">
+                <div>
+                    <div class="eyebrow">Codex 国内站正式上线</div>
+                    <h1>无需魔法、无需海外手机号，<span>一半价格</span>用上 GPT-5.5 和 GPTimage2</h1>
+                    <p class="hero-lead">
+                        面向国内用户的 Codex 使用入口，集中解决网络访问、账号注册、手机号验证、支付方式、模型权限和工具切换这些前置问题。
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="https://codex.chatgpt-plus.top/login" target="_blank" rel="noopener noreferrer">进入国内官网</a>
+                        <a class="btn btn-secondary" href="https://maynorai.jichiyun.sbs/buy/30" target="_blank" rel="noopener noreferrer">购买 Codex&GPTimage2 套餐</a>
+                    </div>
+                    <div class="proof-strip">
+                        <div class="proof-item">
+                            <strong>无需魔法</strong>
+                            <span>打开即可按教程配置</span>
+                        </div>
+                        <div class="proof-item">
+                            <strong>无需海外手机号</strong>
+                            <span>降低注册和验证门槛</span>
+                        </div>
+                        <div class="proof-item">
+                            <strong>编程 + 图像</strong>
+                            <span>Codex Agent 与 GPTimage2</span>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>为什么选择GPT Codex？</h2>
-                <p>Anthropic全面禁止Claude模型在中国渠道使用，Codex将成为您的最佳选择</p>
-            </div>
-            <div class="reasons-grid">
-                <div class="reason-card">
-                    <div class="reason-number">1</div>
-                    <h3>GPT-5编程能力第一梯队</h3>
-                    <p>使用OpenAI最先进的GPT-5模型，编程能力绝对领先，提供无与伦比的代码生成和重构体验。</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-number">2</div>
-                    <h3>每日更新，官方高度重视</h3>
-                    <p>Codex几乎每天都会发布更新，OpenAI官方投入大量资源，确保您始终使用最新版本。</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-number">3</div>
-                    <h3>性价比超高</h3>
-                    <p>每月仅需20美元即可使用gpt-5-thinking-high模型，而且很少达到使用上限，是不可错过的AI编程利器。</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-number">4</div>
-                    <h3>开发者口碑爆发</h3>
-                    <p>越来越多的开发者开始转向Codex，良好的用户体验和不断增长的社区支持，形成强大的正反馈。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tutorial Section -->
-    <section id="tutorial" class="tutorial-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>🚀 启动教程</h2>
-                <p>5步快速开始使用GPT Codex CLI</p>
-            </div>
-            
-            <!-- Step 1: Network -->
-            <div class="step-card">
-                <div class="step-header">
-                    <div class="step-number-large">1</div>
-                    <h2 class="step-title">网络配置</h2>
-                </div>
-                <p>首先确保您可以正常访问ChatGPT服务：</p>
-                <div class="code-block">
-                    <code>curl -I https://chatgpt.com</code>
-                </div>
-                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035369.png" alt="网络测试" />
-                
-                <div class="highlight-note">
-                    <h4>⚠️ 如果卡在这一步</h4>
-                    <p>原因可能是没有将代理命令复制到终端。首先确保 <code>curl ipinfo.io</code> 输出的结果符合预期，然后继续尝试解决 <code>curl -I https://chatgpt.com</code> 的连通性问题。</p>
-                </div>
-                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035501.png" alt="网络问题示例" />
-            </div>
-            
-            <!-- Step 2: Account -->
-            <div class="step-card">
-                <div class="step-header">
-                    <div class="step-number-large">2</div>
-                    <h2 class="step-title">账号准备</h2>
-                </div>
-                <p>请确保开通每月20美元的ChatGPT Plus服务：</p>
-                <div class="highlight-note">
-                    <p>🎯 <strong>自助充值链接：</strong><a href="https://717ka.com/p/9ezez0xoho8qe7u2w6q1roul" target="_blank" style="color: #1e40af;">https://717ka.com/p/9ezez0xoho8qe7u2w6q1roul</a></p>
-                </div>
-                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035731.png" alt="ChatGPT Plus" />
-                
-                <p>每月20美元的套餐足够应付日常开发使用，很少会出现额度不足的情况。而且这里的使用次数不会影响ChatGPT官方其他服务，是非常划算的选择。</p>
-                
-                <blockquote style="background: #f0f9ff; border-left: 4px solid #3b82f6; padding: 20px; margin: 20px 0; border-radius: 8px;">
-                    💡 <strong>提示：</strong>就算您没有代码开发需求，用GPT Codex来写文档也是非常划算的！该薅的羊毛一定要薅。
-                </blockquote>
-            </div>
-            
-            <!-- Step 3: Installation -->
-            <div class="step-card">
-                <div class="step-header">
-                    <div class="step-number-large">3</div>
-                    <h2 class="step-title">CLI安装</h2>
-                </div>
-                <p><strong>项目地址：</strong><a href="https://github.com/openai/codex" target="_blank">https://github.com/openai/codex</a></p>
-                
-                <p>可以使用以下三种方式完成安装：</p>
-                <ul style="margin: 20px 0; padding-left: 20px;">
-                    <li><code>npm install -g @openai/codex</code></li>
-                    <li><code>brew install codex</code></li>
-                    <li>直接下载GitHub Releases</li>
-                </ul>
-                
-                <div class="highlight-note">
-                    <h4>📢 重要提醒</h4>
-                    <p>定期（最好每天）重新执行上述命令，确保使用最新版本。</p>
-                </div>
-                
-                <p>如果你对版本有特殊要求（尤其是希望第一时间体验内测alpha版本），更推荐直接下载GitHub Releases。</p>
-                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035856.png" alt="GitHub Releases" />
-                
-                <p><a href="https://github.com/openai/codex/releases" target="_blank" class="cta-button">前往下载 Releases</a></p>
-                
-                <p>选择适合您机器的可执行文件：</p>
-                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095035983.png" alt="版本选择" />
-                
-                <ul style="margin: 20px 0; padding-left: 20px;">
-                    <li><code>aarch64</code> → Apple M 系列芯片</li>
-                    <li><code>x86_64</code> → Intel/AMD 64 位 CPU</li>
-                    <li><code>darwin</code> → macOS</li>
-                    <li><code>pc-windows-msvc</code> → Windows</li>
-                    <li><code>unknown-linux-gnu/musl</code> → Linux</li>
-                </ul>
-                
-                <p><strong>以Apple M系列为例的安装命令：</strong></p>
-                <div class="code-block">
-                    <code># 下载指定版本
-gh release download --repo openai/codex --pattern 'codex-aarch64-apple-darwin.tar.gz'
-
-# 解压文件
-tar -xzf codex-aarch64-apple-darwin.tar.gz
-
-# 重命名
-mv codex-aarch64-apple-darwin codex
-
-# 移动到系统路径
-sudo mv codex /usr/local/bin/</code>
-                </div>
-                
-                <p>虽然这种方式稍微繁琐一些，但现在有了AI的帮助，其实很好解决... 甚至可以封装一个快捷键！</p>
-                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095040148.png" alt="AI辅助" />
-                
-                <p>简直丝滑！</p>
-                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095040415.png" alt="丝滑体验" />
-            </div>
-            
-            <!-- Step 4: Launch -->
-            <div class="step-card">
-                <div class="step-header">
-                    <div class="step-number-large">4</div>
-                    <h2 class="step-title">启动使用</h2>
-                </div>
-                <p>在终端输入以下命令启动Codex：</p>
-                <div class="code-block">
-                    <code>codex</code>
-                </div>
-                
-                <p>选择使用ChatGPT账户登录：</p>
-                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095040757.png" alt="启动界面" />
-                
-                <p>完成授权之后即可登录成功：</p>
-                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095041207.png" alt="登录成功" />
-            </div>
-            
-            <!-- Step 5: Test -->
-            <div class="step-card">
-                <div class="step-header">
-                    <div class="step-number-large">5</div>
-                    <h2 class="step-title">测试验证</h2>
-                </div>
-                <p>输入一个最简单的"hello"，如果收到回复，说明启动成功！</p>
-                <img src="https://restname.oss-cn-hangzhou.aliyuncs.com/640-20250907095041466.png" alt="测试成功" />
-                
-                <div style="text-align: center; margin: 30px 0;">
-                    <div style="background: linear-gradient(45deg, #10b981, #059669); color: white; padding: 30px; border-radius: 16px; display: inline-block;">
-                        <h3 style="margin: 0; font-size: 1.8rem;">🎉 恭喜！GPT Codex配置完成！</h3>
-                        <p style="margin: 10px 0 0 0; opacity: 0.9;">现在您可以开始使用OpenAI最先进的AI编程助手了！</p>
+                <div class="product-panel" aria-label="Codex Agent 工作流示意">
+                    <div class="panel-top">
+                        <span class="panel-dot"></span>
+                        <span class="panel-dot"></span>
+                        <span class="panel-dot"></span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel-status">
+                            <div>
+                                <span>模型</span>
+                                <strong>GPT-5.5</strong>
+                            </div>
+                            <div>
+                                <span>图像</span>
+                                <strong>GPTimage2</strong>
+                            </div>
+                            <div>
+                                <span>模式</span>
+                                <strong>Agent</strong>
+                            </div>
+                        </div>
+                        <div class="terminal-card">
+                            <div><span class="dim">$</span> codex</div>
+                            <div><span class="accent">Plan</span> 分析项目结构与 README</div>
+                            <div><span class="accent">Edit</span> 修改首页文案、样式与链接</div>
+                            <div><span class="accent">Check</span> 本地预览、检查 diff、提交 GitHub</div>
+                            <div class="dim">Ready for AI Agent workflow.</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section">
-        <div class="container">
-            <h2>💰 订阅服务</h2>
-            <div class="pricing-card">
-                <h3>ChatGPT Plus</h3>
-                <p>每月仅需20美元，即可解锁GPT-5编程能力的全部潜力</p>
-                <a href="https://717ka.com/p/9ezez0xoho8qe7u2w6q1roul" target="_blank" class="cta-button">立即订阅</a>
+        <section id="entry" class="section-band">
+            <div class="container">
+                <div class="section-header">
+                    <h2>先从这三个入口开始</h2>
+                    <p>README 里的核心入口已经整理到首页，适合直接访问、购买和下载桌面 App。</p>
+                </div>
+                <div class="quick-links">
+                    <article class="entry-card">
+                        <h3>国内官网入口</h3>
+                        <p>进入 Codex 国内站，按教程完成配置并开始使用。</p>
+                        <a class="plain-link" href="https://codex.chatgpt-plus.top/login" target="_blank" rel="noopener noreferrer">codex.chatgpt-plus.top/login</a>
+                    </article>
+                    <article class="entry-card">
+                        <h3>购买入口</h3>
+                        <p>购买 Codex&GPTimage2 套餐，使用 GPT-5.5 与图像生成能力。</p>
+                        <a class="plain-link" href="https://maynorai.jichiyun.sbs/buy/30" target="_blank" rel="noopener noreferrer">maynorai.jichiyun.sbs/buy/30</a>
+                    </article>
+                    <article class="entry-card">
+                        <h3>桌面 App 下载</h3>
+                        <p>Mac 用户下载官方 dmg，Windows 用户可下载本地安装包。</p>
+                        <div class="card-actions">
+                            <a class="plain-link" href="https://persistent.oaistatic.com/codex-app-prod/Codex.dmg" target="_blank" rel="noopener noreferrer">macOS 下载</a>
+                            <a class="plain-link" href="https://pan.quark.cn/s/0f1763fe2ac9?pwd=rTQw" target="_blank" rel="noopener noreferrer">Windows 本地包</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section id="why" class="section-band alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>为什么要做 Codex 国内站</h2>
+                    <p>很多人不是不会写 prompt，也不是不会写代码，而是卡在账号、网络、付款、配置这些前置问题上。</p>
+                </div>
+                <div class="pain-grid">
+                    <article class="pain-card">
+                        <h3>访问和注册门槛高</h3>
+                        <p>官方服务访问不稳定，注册可能遇到地区、账号、手机号和验证码问题，新手经常第一步就被卡住。</p>
+                        <div class="tag-list">
+                            <span>网络访问</span>
+                            <span>手机号验证</span>
+                            <span>账号风控</span>
+                        </div>
+                    </article>
+                    <article class="pain-card">
+                        <h3>支付和模型权限不清楚</h3>
+                        <p>官方订阅、API、图像能力和客户端配置经常混在一起，很多用户不知道自己到底能不能用 GPT-5.5、Codex 和图像模型。</p>
+                        <div class="tag-list">
+                            <span>付款方式</span>
+                            <span>模型权限</span>
+                            <span>配置复杂</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-band">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Codex 国内站解决了什么</h2>
+                    <p>它不是 OpenAI 官方订阅，而是帮助国内用户更低门槛、更低成本、更快用上 Codex 和 GPTimage2 能力的第三方中转方案。</p>
+                </div>
+                <div class="comparison-grid">
+                    <article class="comparison-card">
+                        <h3>官方订阅</h3>
+                        <p>适合追求官方原生体验的人，通常需要自备网络环境，也可能遇到手机号和支付门槛。</p>
+                    </article>
+                    <article class="comparison-card highlight">
+                        <h3>Codex 国内站</h3>
+                        <p>适合想快速使用的人，无需自备魔法，无需海外手机号，按教程配置即可开始。</p>
+                    </article>
+                    <article class="comparison-card">
+                        <h3>cc-switch + 中转 API</h3>
+                        <p>适合想自己配置客户端的人，更灵活，但需要理解 API、客户端和路由配置。</p>
+                    </article>
+                </div>
+                <div class="notice">
+                    说明：Codex 国内站是第三方中转方案，不是 OpenAI 官方订阅。选择它的核心理由是快速可用、低门槛和更低成本。
+                </div>
+            </div>
+        </section>
+
+        <section id="capabilities" class="section-band alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>GPT-5.5 与 GPTimage2 能做什么</h2>
+                    <p>Codex&GPTimage2 套餐把编程 Agent 和图像能力放在一起，更适合真实工作流。</p>
+                </div>
+                <div class="capability-grid">
+                    <article class="capability-card">
+                        <h3>GPT-5.5：复杂任务与编程 Agent</h3>
+                        <p>适合代码生成、项目重构、Bug 修复、前端页面修改、自动化脚本、长文档整理、多步骤任务规划和 Agent 工作流执行。</p>
+                        <div class="check-list">
+                            <span>找文件</span>
+                            <span>改代码</span>
+                            <span>本地预览</span>
+                            <span>commit / push</span>
+                        </div>
+                    </article>
+                    <article class="capability-card">
+                        <h3>GPTimage2：内容创作与视觉素材</h3>
+                        <p>适合公众号配图、小红书封面、网站首图、产品展示图、广告素材、Banner、海报草图和电商视觉图。</p>
+                        <div class="check-list">
+                            <span>封面图</span>
+                            <span>配图</span>
+                            <span>海报素材</span>
+                            <span>产品视觉</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-band">
+            <div class="container">
+                <div class="section-header">
+                    <h2>适合哪些用户</h2>
+                    <p>从小白到独立开发者，再到内容创作者和 AI 工具重度用户，都可以把 Codex 当成一个完整工作流入口。</p>
+                </div>
+                <div class="quick-links">
+                    <article class="entry-card">
+                        <h3>Codex 小白用户</h3>
+                        <p>不用先解决网络、手机号、支付和大量 API 概念，先从修改标题、整理 README、添加页面这样的小任务练起。</p>
+                    </article>
+                    <article class="entry-card">
+                        <h3>独立开发者</h3>
+                        <p>一个人处理前端、后端、文档、部署、GitHub、脚本、自动化、产品文案和图片素材时，Codex 可以把流程串起来。</p>
+                    </article>
+                    <article class="entry-card">
+                        <h3>内容创作者</h3>
+                        <p>用 GPTimage2 生成封面、配图和产品图，再用 Codex 整理 Markdown、网页、多语言版本和静态站发布。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="flow" class="section-band alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>推荐使用流程</h2>
+                    <p>第一次使用不要一上来做大项目，先用一个小而明确的任务跑完整个闭环。</p>
+                </div>
+                <div class="flow">
+                    <div class="flow-step">
+                        <strong>1. 购买套餐</strong>
+                        <span>进入购买入口，开通 Codex&GPTimage2。</span>
+                    </div>
+                    <div class="flow-step">
+                        <strong>2. 完成配置</strong>
+                        <span>按教程配置，下载 Codex Desktop App。</span>
+                    </div>
+                    <div class="flow-step">
+                        <strong>3. 新建项目</strong>
+                        <span>准备项目文件夹，开启新的 Thread。</span>
+                    </div>
+                    <div class="flow-step">
+                        <strong>4. 先让 Codex Plan</strong>
+                        <span>确认计划后再让它执行文件修改。</span>
+                    </div>
+                    <div class="flow-step">
+                        <strong>5. 检查并提交</strong>
+                        <span>本地预览、检查 diff、提交到 GitHub。</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section-band">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题</h2>
+                    <p>把 README 里的关键疑问整理成简短回答，方便新用户快速判断是否适合。</p>
+                </div>
+                <div class="faq-grid">
+                    <article class="faq-card">
+                        <h3>需要魔法吗？</h3>
+                        <p>不需要。Codex 国内站和第三方中转方案的核心优势之一就是无需自备魔法。</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>需要海外手机号吗？</h3>
+                        <p>不需要海外手机号，也不用反复处理验证码问题。</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>可以用 GPT-5.5 吗？</h3>
+                        <p>可以。Codex&GPTimage2 套餐支持使用 GPT-5.5。</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>可以用 GPTimage2 吗？</h3>
+                        <p>可以。适合做图片、封面、配图、广告素材等视觉内容。</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>适合不会写代码的人吗？</h3>
+                        <p>适合。你可以先学会描述目标、拆分任务和检查结果，再让 Codex 推进具体执行。</p>
+                    </article>
+                    <article class="faq-card">
+                        <h3>这是 OpenAI 官方订阅吗？</h3>
+                        <p>不是。这是第三方中转方案，适合更在意快速可用、低门槛和价格的人。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-box">
+                <div>
+                    <h2>更低门槛开始使用 Codex</h2>
+                    <p>不用先折腾账号、网络、付款和复杂配置，直接进入 AI Agent 工作流。</p>
+                </div>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="https://maynorai.jichiyun.sbs/buy/30" target="_blank" rel="noopener noreferrer">立即购买套餐</a>
+                    <a class="btn btn-secondary" href="https://codex.chatgpt-plus.top/login" target="_blank" rel="noopener noreferrer">进入国内官网</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>🚀 GPT Codex</h3>
-                    <p>OpenAI最新AI编程工具</p>
+                    <h3>Codex 国内站</h3>
+                    <p>无需魔法、无需海外手机号，一半价格用上 GPT-5.5 和 GPTimage2。</p>
                 </div>
                 <div class="footer-section">
                     <h4>快速链接</h4>
-                    <a href="#features">为什么选择</a>
-                    <a href="#tutorial">使用教程</a>
-                    <a href="#pricing">订阅服务</a>
-                    <a href="#contact">联系我们</a>
+                    <a href="#entry">入口</a>
+                    <a href="#why">为什么做</a>
+                    <a href="#capabilities">能力</a>
+                    <a href="#flow">流程</a>
                 </div>
                 <div class="footer-section">
-                    <h4>技术支持</h4>
-                    <p>微信：coder-maynor</p>
-                    <p>QQ：1002569303</p>
+                    <h4>下载</h4>
+                    <a href="https://persistent.oaistatic.com/codex-app-prod/Codex.dmg" target="_blank" rel="noopener noreferrer">Codex macOS App</a>
+                    <a href="https://pan.quark.cn/s/0f1763fe2ac9?pwd=rTQw" target="_blank" rel="noopener noreferrer">Windows 本地安装包</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 GPT Codex. All rights reserved.</p>
-                <p>最后更新时间：2025年7月1日</p>
+                <p>&copy; 2026 Codex 国内站. All rights reserved.</p>
+                <p>内容根据 README 更新。</p>
             </div>
         </div>
     </footer>
+
+    <div id="message-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close" type="button" aria-label="关闭">&times;</button>
+            <div id="modal-message" class="modal-body"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
