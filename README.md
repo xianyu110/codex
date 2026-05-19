@@ -21,6 +21,10 @@
 
 https://codex.chatgpt-plus.top/login
 
+备用网址：
+
+https://codex2.chatgpt-plus.top/login
+
 购买入口：
 
 https://maynorai.jichiyun.sbs/buy/30
@@ -462,6 +466,10 @@ https://maynorai.jichiyun.sbs/buy/30
 国内官网入口：
 
 https://codex.chatgpt-plus.top/login
+
+备用网址：
+
+https://codex2.chatgpt-plus.top/login
 
 购买入口：
 
