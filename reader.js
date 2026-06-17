@@ -33,7 +33,25 @@
         });
 
     function normalizePath(path) {
-        return path.replace(/^\/+/, '').replace(/\\/g, '/').replace(/\/{2,}/g, '/');
+        return normalizeSegments(path.replace(/^\/+/, '').replace(/\\/g, '/').replace(/\/{2,}/g, '/'));
+    }
+
+    function normalizeSegments(path) {
+        const parts = [];
+        for (const part of path.split('/')) {
+            if (!part || part === '.') {
+                continue;
+            }
+            if (part === '..') {
+                if (!parts.length) {
+                    return `../${parts.join('/')}`;
+                }
+                parts.pop();
+                continue;
+            }
+            parts.push(part);
+        }
+        return parts.join('/');
     }
 
     function isAllowed(path) {
@@ -217,7 +235,7 @@
 
     function resolveLink(href, currentFile) {
         if (/^(https?:|mailto:|#)/.test(href)) return href;
-        const cleanHref = href.replace(/^\.?\//, '');
+        const cleanHref = href.replace(/^\.\//, '');
         const currentDir = currentFile.split('/').slice(0, -1).join('/');
         const resolved = normalizePath(`${currentDir}/${cleanHref}`);
 
