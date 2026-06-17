@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex 教程阅读器</title>
+  <meta name="description" content="Codex 中文教程站 Markdown 阅读器。">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    :root {
+      --bg: #f7fafc;
+      --panel: #ffffff;
+      --ink: #111827;
+      --muted: #64748b;
+      --line: #dbe4ee;
+      --brand: #0f766e;
+      --brand-dark: #115e59;
+      --soft: #ecfdf5;
+      --code: #101828;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 80% 0%, rgba(15, 118, 110, 0.08), transparent 28%),
+        var(--bg);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: var(--brand-dark); }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .topbar-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      color: var(--brand-dark);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .nav a,
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .layout {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 64px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .article,
+    .toc {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+    }
+
+    .article {
+      padding: clamp(22px, 4vw, 44px);
+      min-width: 0;
+    }
+
+    .article-header {
+      margin-bottom: 26px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .file-path {
+      color: var(--muted);
+      font-family: Monaco, Menlo, Consolas, monospace;
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+
+    .article h1,
+    .article h2,
+    .article h3 {
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .article h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--brand-dark);
+    }
+
+    .article h2 {
+      margin: 34px 0 14px;
+      padding-top: 8px;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+    }
+
+    .article h3 {
+      margin: 26px 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .article p,
+    .article li {
+      color: #334155;
+      font-size: 1rem;
+    }
+
+    .article blockquote {
+      margin: 18px 0;
+      padding: 14px 18px;
+      border-left: 4px solid var(--brand);
+      background: var(--soft);
+      border-radius: 10px;
+    }
+
+    .article code {
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: #eef2f7;
+      color: #0f172a;
+      font-family: Monaco, Menlo, Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    .article pre {
+      overflow-x: auto;
+      margin: 18px 0;
+      padding: 18px;
+      border-radius: 14px;
+      background: var(--code);
+      color: #e5e7eb;
+    }
+
+    .article pre code {
+      padding: 0;
+      background: transparent;
+      color: inherit;
+      font-size: 0.92rem;
+    }
+
+    .article table {
+      width: 100%;
+      margin: 18px 0;
+      border-collapse: collapse;
+      display: block;
+      overflow-x: auto;
+    }
+
+    .article th,
+    .article td {
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .article th {
+      background: #f1f5f9;
+      color: var(--brand-dark);
+    }
+
+    .toc {
+      position: sticky;
+      top: 78px;
+      padding: 18px;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      font-size: 1rem;
+      color: var(--brand-dark);
+    }
+
+    .toc a {
+      display: block;
+      padding: 6px 0;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .toc a:hover { color: var(--brand-dark); }
+    .toc .level-3 { padding-left: 14px; }
+
+    .error {
+      padding: 18px;
+      border-radius: 12px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #9a3412;
+    }
+
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .toc { position: static; order: -1; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; }
+      .nav { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">Codex 国内站</a>
+      <nav class="nav">
+        <a href="docs/">教程目录</a>
+        <a href="recipes/">实战案例</a>
+        <a href="reference/">速查</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="layout">
+    <article class="article">
+      <div class="article-header">
+        <a class="back-link" id="back-link" href="docs/">返回目录</a>
+        <p class="file-path" id="file-path"></p>
+      </div>
+      <div id="article-body">
+        <p>正在加载教程...</p>
+      </div>
+    </article>
+    <aside class="toc" id="toc" aria-label="文章目录">
+      <h2>本页目录</h2>
+      <div id="toc-list"></div>
+    </aside>
+  </main>
+
+  <script src="reader.js"></script>
+</body>
+</html>
+
