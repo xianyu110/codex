@@ -1,6 +1,25 @@
 
 # Codex 国内站正式上线！无需魔法、无需手机号，一半价格用上 GPT-5.5 和 GPTimage2
 
+## 完整教程目录
+
+这个仓库已经补充为 Codex 中文实战教程站，原来的国内站、备用网址、购买入口和下载链接继续保留。
+
+| 目录 | 作用 | 入口 |
+|---|---|---|
+| `docs/guide/` | 入门教程：安装、订阅、中转 API、App、权限、Plan Mode、Threads、Skills、MCP、自动化、CLI | [docs/index.md](docs/index.md) |
+| `recipes/` | 实战案例库：README 变网页、PPT、Draw.io、Obsidian、Playwright、飞书、GitHub Actions、服务器巡检等 | [recipes/index.md](recipes/index.md) |
+| `reference/` | 速查：命令、推荐设置、安全、FAQ | [reference/commands.md](reference/commands.md) |
+
+新手推荐顺序：
+
+1. 先看 [docs/guide/00-overview.md](docs/guide/00-overview.md)。
+2. 安装和接入看 [docs/guide/01-install.md](docs/guide/01-install.md)、[docs/guide/02-subscribe.md](docs/guide/02-subscribe.md)、[docs/guide/03-third-party-api.md](docs/guide/03-third-party-api.md)。
+3. 第一个任务直接做 [docs/guide/14-first-task.md](docs/guide/14-first-task.md)。
+4. 后续从 [recipes/index.md](recipes/index.md) 选择适合自己的实战案例。
+
+---
+
 如果你一直想用 Codex，但被网络环境、账号注册、手机号验证、付款方式和模型权限卡住，那么这次可以直接看这里。
 
 **Codex 国内站正式上线。**

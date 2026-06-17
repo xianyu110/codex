@@ -24,8 +24,12 @@ function setupEventListeners() {
     // Smooth scrolling for navigation links
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
+            if (!targetId || !targetId.startsWith('#')) {
+                return;
+            }
+
+            e.preventDefault();
             const targetSection = document.querySelector(targetId);
             if (targetSection) {
                 const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
