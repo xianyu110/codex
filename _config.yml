@@ -1,13 +1,13 @@
-# GitHub Pages 配置文件 - AI特惠中心
-title: "🌞 暑期AI产品特惠中心"
-description: "ChatGPT/Claude/Grok镜像站优惠券，暑期特惠9折，AI工具订阅服务平台"
+# GitHub Pages 配置文件 - Codex 中文实战教程
+title: "Codex 中文实战教程"
+description: "Codex 国内站入口、安装配置指南、实战案例库与安全速查"
 url: "https://xianyu110.github.io"
 baseurl: "/codex"
 
 # SEO 优化
 lang: zh-CN
-author: "AI特惠中心"
-keywords: "AI, ChatGPT, Claude, Grok, 优惠券, 暑期特惠, AI工具, 镜像站"
+author: "Codex 中文教程"
+keywords: "Codex, Codex 教程, ChatGPT, GPTimage2, AI 编程, MCP, Skills, 自动化, 国内站"
 
 # 插件配置 (如果使用Jekyll)
 plugins:
@@ -53,4 +53,4 @@ defaults:
       path: ""
     values:
       layout: "default"
-      author: "AI特惠中心"
+      author: "Codex 中文教程"
