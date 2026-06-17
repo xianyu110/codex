@@ -7,14 +7,14 @@
 
 | 目录 | 作用 | 入口 |
 |---|---|---|
-| `docs/guide/` | 入门教程：安装、订阅、中转 API、App、权限、Plan Mode、Threads、Skills、MCP、自动化、CLI | [docs/index.md](docs/index.md) |
+| `docs/guide/` | 入门教程：完整主线、安装、订阅、中转 API、App、权限、Plan Mode、Threads、Skills、MCP、自动化、CLI | [docs/index.md](docs/index.md) |
 | `recipes/` | 实战案例库：README 变网页、PPT、Draw.io、Obsidian、Playwright、飞书、GitHub Actions、服务器巡检等 | [recipes/index.md](recipes/index.md) |
 | `reference/` | 速查：命令、推荐设置、安全、FAQ | [reference/commands.md](reference/commands.md) |
 
 新手推荐顺序：
 
-1. 先看 [docs/guide/00-overview.md](docs/guide/00-overview.md)。
-2. 安装和接入看 [docs/guide/01-install.md](docs/guide/01-install.md)、[docs/guide/02-subscribe.md](docs/guide/02-subscribe.md)、[docs/guide/03-third-party-api.md](docs/guide/03-third-party-api.md)。
+1. 先看 [docs/guide/full-course.md](docs/guide/full-course.md)，按完整主线从安装走到第一个交付项目。
+2. 想分章查阅，再看 [docs/guide/00-overview.md](docs/guide/00-overview.md) 和 `01-install.md` 到 `14-first-task.md`。
 3. 第一个任务直接做 [docs/guide/14-first-task.md](docs/guide/14-first-task.md)。
 4. 后续从 [recipes/index.md](recipes/index.md) 选择适合自己的实战案例。
 

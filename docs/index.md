@@ -8,6 +8,7 @@
 
 | 阶段 | 适合人群 | 先看 |
 | --- | --- | --- |
+| 完整主线 | 想从安装走到第一个交付项目 | [guide/full-course.md](guide/full-course.md) |
 | 0 到 1 入门 | 第一次接触 Codex | [guide/00-overview.md](guide/00-overview.md) |
 | 安装和账号 | 需要把环境跑起来 | [guide/01-install.md](guide/01-install.md) |
 | 国内访问和中转 | 不想自备网络环境或想接第三方 API | [guide/03-third-party-api.md](guide/03-third-party-api.md) |
@@ -18,6 +19,7 @@
 
 ## 入门教程
 
+- [full-course.md](guide/full-course.md): 完整实战教程，从安装到第一个可交付项目
 - [00-overview.md](guide/00-overview.md): 学习路线和这份教程怎么用
 - [01-install.md](guide/01-install.md): 下载与安装，桌面 App 和 CLI 二选一
 - [02-subscribe.md](guide/02-subscribe.md): 订阅 ChatGPT Plus / Pro
@@ -48,4 +50,3 @@
 - [settings.md](../reference/settings.md): 推荐设置速查
 - [safety.md](../reference/safety.md): 安全与避坑
 - [faq.md](../reference/faq.md): 常见问题
-
