@@ -36,11 +36,38 @@
 
         .navbar {
             position: sticky;
+            padding: 14px 0;
+            background: rgba(255, 255, 255, 0.92);
+            border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            gap: 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 10px;
         }
 
         .nav-brand h1 {
             color: var(--brand-dark);
             letter-spacing: 0;
+        }
+
+        .nav-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: #fff;
+            color: var(--ink);
+            font-weight: 700;
+            text-decoration: none;
         }
 
         .nav-links a:hover,
@@ -49,7 +76,7 @@
         }
 
         .nav-links a::after {
-            background: var(--brand);
+            content: none;
         }
 
         .hero-domestic {
@@ -107,7 +134,7 @@
         }
 
         .btn {
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
         .btn-primary {
@@ -140,7 +167,7 @@
         .proof-item {
             padding: 14px 16px;
             border: 1px solid rgba(15, 118, 110, 0.18);
-            border-radius: 14px;
+            border-radius: 8px;
             background: rgba(255, 255, 255, 0.72);
         }
 
@@ -158,7 +185,7 @@
         .product-panel {
             background: rgba(255, 255, 255, 0.86);
             border: 1px solid rgba(148, 163, 184, 0.28);
-            border-radius: 22px;
+            border-radius: 8px;
             box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
             overflow: hidden;
         }
@@ -211,7 +238,7 @@
         .terminal-card {
             background: #101828;
             color: #e5e7eb;
-            border-radius: 14px;
+            border-radius: 8px;
             padding: 20px;
             font-family: Monaco, Menlo, Consolas, monospace;
             font-size: 0.9rem;
@@ -251,8 +278,8 @@
         .comparison-card {
             background: var(--surface);
             border: 1px solid var(--line);
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+            border-radius: 8px;
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
         }
 
         .entry-card {
@@ -347,7 +374,7 @@
             padding: 22px 18px;
             background: #fff;
             border: 1px solid var(--line);
-            border-radius: 16px;
+            border-radius: 8px;
         }
 
         .flow-step strong {
@@ -375,7 +402,7 @@
         .notice {
             margin-top: 24px;
             padding: 18px 20px;
-            border-radius: 14px;
+            border-radius: 8px;
             background: var(--danger-soft);
             border: 1px solid #fed7aa;
             color: #9a3412;
@@ -432,6 +459,16 @@
         @media (max-width: 768px) {
             .hero-domestic {
                 padding: 74px 0 52px;
+            }
+
+            .nav-container {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                display: flex;
+                justify-content: flex-start;
             }
 
             .proof-strip,
