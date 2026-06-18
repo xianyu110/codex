@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Codex x Hatch Pet: 用一张照片生成专属桌面宠物 场景图</title>
+  <desc id="desc">宠物素材包、安装说明、桌面工作台预览</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#faf5ff"/><stop offset="1" stop-color="#e0f2fe"/></linearGradient><filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.18"/></filter></defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <g opacity="0.45" stroke="#cbd5e1" stroke-width="2"><path d="M0 96H1200M0 192H1200M0 288H1200M0 384H1200M0 480H1200M0 576H1200"/><path d="M120 0V675M240 0V675M360 0V675M480 0V675M600 0V675M720 0V675M840 0V675M960 0V675M1080 0V675"/></g>
+  <rect x="70" y="64" width="1060" height="547" rx="28" fill="#fff" stroke="#0f172a" stroke-width="4" filter="url(#shadow)"/>
+  <rect x="70" y="64" width="1060" height="76" rx="28" fill="#a855f7"/>
+  <circle cx="118" cy="102" r="12" fill="#fee2e2"/><circle cx="158" cy="102" r="12" fill="#fef3c7"/><circle cx="198" cy="102" r="12" fill="#dcfce7"/>
+  <text x="250" y="111" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#fff">移动与个性化</text>
+  <text x="104" y="206" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="900" fill="#111827">Codex x Hatch Pet: 用一张照片生成专属桌面</text>
+  <text x="104" y="258" font-family="Inter, Arial, sans-serif" font-size="24" fill="#475569">宠物素材包、安装说明、桌面工作台预览</text>
+  <g transform="translate(116 322)"><rect width="250" height="170" rx="24" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="4"/><circle cx="125" cy="70" r="34" fill="#a855f7"/><path d="M72 132c32-42 72-42 106 0" fill="none" stroke="#111827" stroke-width="9" stroke-linecap="round"/><circle cx="112" cy="66" r="6" fill="#fff"/><circle cx="138" cy="66" r="6" fill="#fff"/></g>
+  <g transform="translate(448 322)"><rect width="300" height="170" rx="18" fill="#ecfeff" stroke="#67e8f9" stroke-width="3"/><text x="30" y="58" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800" fill="#111827">Skill 生成素材</text><path d="M30 94H248" stroke="#a855f7" stroke-width="10" stroke-linecap="round"/><path d="M30 132H190" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/></g>
+  <g transform="translate(820 322)"><rect width="250" height="170" rx="18" fill="#f0fdf4" stroke="#86efac" stroke-width="3"/><text x="30" y="58" font-family="Inter, Arial, sans-serif" font-size="27" font-weight="800" fill="#111827">安装预览</text><circle cx="52" cy="104" r="16" fill="#a855f7"/><path d="M44 104l7 7 17-21" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="104" y="555" font-family="Inter, Arial, sans-serif" font-size="24" fill="#64748b">Photo -> Skill -> Pet package -> Preview -> Rollback</text>
+</svg>
