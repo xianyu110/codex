@@ -4,115 +4,115 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Codex 实战案例库 | MaynorAI</title>
-  <meta name="description" content="Codex 实战案例库，按 16 个主案例组织 PPT、Draw.io、Playwright、Obsidian、飞书、Figma、Notion、CI、远程排障和安卓远程操控。">
+  <meta name="description" content="Codex 实战案例库，按 16 个主案例组织 PPT、Draw.io、Playwright、Obsidian、飞书、Figma、Notion、CI、远程排障、Hatch Pet 和安卓远程操控。">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <style>
-    :root { --bg:#120f1d; --panel:#221c35; --panel-2:#2c2445; --text:#f7f3e9; --muted:#c8bfdc; --cyan:#62f3ff; --pink:#ff6bd6; --yellow:#ffd84d; --green:#7dff8a; --border:#0a0812; --grid:rgba(255,255,255,.06); }
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:"Courier New","Monaco",monospace;color:var(--text);background:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),linear-gradient(180deg,#0d0a15 0%,#120f1d 100%);background-size:24px 24px,24px 24px,auto;line-height:1.65} a{color:inherit;text-decoration:none}.container{width:min(1180px,calc(100% - 32px));margin:0 auto}.pixel-box,.card,.button,.nav a,table,.case-card,.mini-card{border:4px solid var(--border);box-shadow:6px 6px 0 rgba(0,0,0,.3)}.topbar{position:sticky;top:0;z-index:20;background:rgba(18,15,29,.92);backdrop-filter:blur(8px);border-bottom:4px solid var(--border)}.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}.brand{font-weight:900}.nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}.nav a,.button{display:inline-flex;padding:8px 12px;background:var(--panel-2);transition:transform .15s ease}.nav a:hover,.button:hover,.card:hover,.case-card:hover,.mini-card:hover{transform:translate(-2px,-2px)}.button-primary{background:var(--cyan);color:#03131a}.button-secondary{background:var(--pink);color:#23061d}.hero{padding:56px 0 36px}.section{padding:32px 0}.hero-grid,.grid-3,.case-grid,.mini-grid{display:grid;gap:18px}.hero-grid{grid-template-columns:1.1fr .9fr;gap:24px}.grid-3{grid-template-columns:repeat(3,1fr)}.case-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.mini-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card,.hero-main,.hero-side,.table-wrap{background:var(--panel);padding:20px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(34px,5vw,64px);line-height:1.1;margin-bottom:16px}h2{font-size:clamp(24px,3.6vw,40px);margin-bottom:14px}h3{color:var(--yellow);margin-bottom:10px}.lead{font-size:18px;color:var(--muted);max-width:820px}.muted{color:var(--muted)}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.tag{display:inline-block;padding:4px 10px;margin-bottom:12px;border:4px solid var(--border);background:var(--yellow);color:#241300;box-shadow:4px 4px 0 rgba(0,0,0,.25)}.tag-cyan{background:var(--cyan);color:#06181a}ul{padding-left:20px;margin:0;color:var(--muted)}li{margin-bottom:8px}.case-card{overflow:hidden;background:var(--panel);transition:transform .15s ease}.case-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#fff;border-bottom:4px solid var(--border)}.case-body{padding:14px}.case-body span{display:inline-block;margin-bottom:8px;color:var(--green);font-size:13px}.case-body p{color:var(--muted);margin-bottom:0;font-size:14px}.mini-card{display:block;background:var(--panel);padding:16px}.mini-card strong{display:block;color:var(--yellow);margin-bottom:6px}.mini-card span{color:var(--muted)}table{width:100%;border-collapse:collapse;min-width:980px;box-shadow:none}th,td{padding:14px;border:4px solid var(--border);text-align:left;background:var(--panel);vertical-align:top}th{background:var(--panel-2);color:var(--yellow)}.table-wrap{overflow-x:auto}.case-link{color:var(--cyan);text-decoration:underline;text-underline-offset:3px}@media(max-width:1100px){.case-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:820px){.hero-grid,.grid-3,.case-grid,.mini-grid{grid-template-columns:1fr}.topbar-inner{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start}}
+    :root { --bg:#f7fafc; --panel:#ffffff; --ink:#0f172a; --muted:#64748b; --line:#dbe4ee; --brand:#0f766e; --brand-2:#0ea5e9; --soft:#ecfdf5; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#f8fafc 0%,#eef7f6 100%);line-height:1.7} a{color:inherit;text-decoration:none}.container{width:min(1180px,calc(100% - 32px));margin:0 auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}.brand{font-weight:900;color:var(--brand)}.nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}.nav a,.button{display:inline-flex;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;font-weight:700}.button-primary{background:var(--brand);border-color:var(--brand);color:#fff}.button-secondary{background:#e0f2fe;border-color:#bae6fd;color:#075985}.hero{padding:54px 0 32px}.section{padding:30px 0}.hero-grid,.grid-3,.case-grid,.mini-grid{display:grid;gap:18px}.hero-grid{grid-template-columns:1.15fr .85fr;gap:24px}.grid-3{grid-template-columns:repeat(3,1fr)}.case-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.mini-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-main,.hero-side,.card,.table-wrap,.case-card,.mini-card{background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 16px 36px rgba(15,23,42,.08)}.hero-main,.hero-side,.card,.table-wrap{padding:22px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(34px,5vw,62px);line-height:1.08;margin-bottom:16px;letter-spacing:0}h2{font-size:clamp(24px,3.6vw,38px);margin-bottom:14px;letter-spacing:0}h3{margin-bottom:10px;letter-spacing:0}.lead{font-size:18px;color:var(--muted);max-width:850px}.muted{color:var(--muted)}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.tag{display:inline-block;padding:4px 10px;margin-bottom:12px;border:1px solid #99f6e4;border-radius:999px;background:var(--soft);color:var(--brand);font-weight:800}.tag-blue{background:#e0f2fe;border-color:#bae6fd;color:#075985}ul{padding-left:20px;margin:0;color:var(--muted)}li{margin-bottom:8px}.case-card{overflow:hidden;transition:transform .15s ease}.case-card:hover,.mini-card:hover,.button:hover{transform:translateY(-2px)}.case-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#fff;border-bottom:1px solid var(--line)}.case-body{padding:14px}.case-body span{display:inline-block;margin-bottom:8px;color:var(--brand);font-size:13px;font-weight:800}.case-body p{color:var(--muted);margin-bottom:0;font-size:14px}.mini-card{display:block;padding:16px}.mini-card strong{display:block;color:var(--brand);margin-bottom:6px}.mini-card span{color:var(--muted)}table{width:100%;border-collapse:collapse;min-width:980px}th,td{padding:12px;border:1px solid var(--line);text-align:left;background:#fff;vertical-align:top}th{background:#f1f5f9;color:var(--brand)}.table-wrap{overflow-x:auto}.case-link{color:#0f766e;text-decoration:underline;text-underline-offset:3px}@media(max-width:1100px){.case-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:820px){.hero-grid,.grid-3,.case-grid,.mini-grid{grid-template-columns:1fr}.topbar-inner{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start}}
   </style>
 </head>
 <body>
 <header class="topbar"><div class="container topbar-inner"><a class="brand" href="../index.html">CODEX 实战案例库</a><nav class="nav"><a href="../index.html">首页</a><a href="../docs/">教程目录</a><a href="../reference/">速查</a><a href="#main-cases">16 个案例</a><a href="#maturity">案例成熟度</a></nav></div></header>
 <main>
-<section class="hero"><div class="container hero-grid"><div class="hero-main pixel-box"><span class="tag">MaynorAI 实战案例</span><h1>Codex 实战案例库</h1><p class="lead">按“案例总览、16 个主案例、怎么选择、成熟度、扩展案例”的方式组织。结构对齐成熟教程站，内容保持原创，并继续保留你的国内站和中转入口。</p><div class="hero-actions"><a class="button button-primary" href="../reader.html?file=recipes/ppt-skill.md">先看 PPT Skill</a><a class="button button-secondary" href="#main-cases">查看 16 个案例</a><a class="button" href="../reader.html?file=docs/guide/full-course.md">完整教程主线</a></div></div><aside class="hero-side pixel-box"><h3>怎么选</h3><ul><li>快速看到效果：PPT、Draw.io、静态部署。</li><li>学习 MCP：Playwright、Figma、Notion。</li><li>工程自动化：远程修 Bug、GitHub Actions。</li><li>个性化工作台：Hatch Pet、安卓远程。</li></ul></aside></div></section>
-<section class="section" id="main-cases"><div class="container"><span class="tag tag-cyan">16 个案例</span><h2>主案例总览</h2><div class="case-grid">
-          <a class="case-card" href="../reader.html?file=recipes/ppt-skill.md">
-            <img src="../assets/recipes/ppt-skill.svg" alt="Codex x PPT Skill：一句话生成演示文稿 场景图">
-            <div class="case-body"><span>01 / 主案例</span><h3>PPT Skill：一句话生成演示文稿</h3><p>用 Skill 生成 PPT 初稿。PPTX 能打开，文字不溢出。</p></div>
+<section class="hero"><div class="container hero-grid"><div class="hero-main"><span class="tag">MaynorAI 实战案例</span><h1>Codex 实战案例库</h1><p class="lead">按参考站的阅读节奏重做：案例总览、16 个主案例、配图入口、怎么选择、成熟度和扩展案例。正文保持原创，并继续保留你的国内站和中转入口。</p><div class="hero-actions"><a class="button button-primary" href="ppt-skill-walkthrough.html">先看 PPT Skill</a><a class="button button-secondary" href="#main-cases">查看 16 个案例</a><a class="button" href="../reader.html?file=docs/guide/full-course.md">完整教程主线</a></div></div><aside class="hero-side"><h3>怎么选</h3><ul><li>快速看到效果：PPT、Draw.io、DKFile。</li><li>学习 MCP：Playwright、Figma、Notion。</li><li>工程自动化：远程修 Bug、GitHub Actions。</li><li>个性化工作台：Hatch Pet、安卓远程。</li></ul></aside></div></section>
+<section class="section" id="main-cases"><div class="container"><span class="tag tag-blue">16 个案例</span><h2>主案例总览</h2><div class="case-grid">
+          <a class="case-card" href="ppt-skill-walkthrough.html">
+            <img src="../assets/recipes/ppt-skill-walkthrough.svg" alt="Codex × PPT Skill：一句话生成演示文稿 场景图">
+            <div class="case-body"><span>01 / 主案例</span><h3>PPT Skill</h3><p>把一段文章、课程主题或会议纪要交给 Codex，让它先拆页级大纲，再生成可编辑 PPTX，并做版式检查。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/drawio-diagram.md">
-            <img src="../assets/recipes/drawio-diagram.svg" alt="Codex x Draw.io：AI 自动绘制架构图 场景图">
-            <div class="case-body"><span>02 / 主案例</span><h3>Draw.io：AI 自动绘制架构图</h3><p>把系统说明变成可编辑架构图。源文件可编辑，连线方向正确。</p></div>
+          <a class="case-card" href="drawio-mcp.html">
+            <img src="../assets/recipes/drawio-mcp.svg" alt="Codex × Draw.io MCP：AI 自动绘制架构图 场景图">
+            <div class="case-body"><span>02 / 主案例</span><h3>Draw.io MCP</h3><p>把系统说明、业务链路或接口调用关系转成可编辑架构图，而不是只生成一张不可修改的图片。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/playwright-mcp.md">
-            <img src="../assets/recipes/playwright-mcp.svg" alt="Codex x Playwright MCP：让 AI 操控浏览器 场景图">
-            <div class="case-body"><span>03 / 主案例</span><h3>Playwright MCP：让 AI 操控浏览器</h3><p>打开网页、点击入口、截图检查。截图存在，链接和控制台检查通过。</p></div>
+          <a class="case-card" href="playwright-mcp.html">
+            <img src="../assets/recipes/playwright-mcp.svg" alt="Codex × Playwright MCP：让 AI 操控浏览器 场景图">
+            <div class="case-body"><span>03 / 主案例</span><h3>Playwright MCP</h3><p>让 Codex 真正打开页面、点击入口、保存截图，并基于页面状态而不是想象来判断结果。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/animation-video.md">
-            <img src="../assets/recipes/animation-video.svg" alt="Codex x 动画视频：用代码生成动画 场景图">
-            <div class="case-body"><span>04 / 主案例</span><h3>动画视频：用代码生成动画</h3><p>把讲稿变成分镜和视频工程。字幕不遮挡，时长和画幅正确。</p></div>
+          <a class="case-card" href="hyperframes-animation.html">
+            <img src="../assets/recipes/hyperframes-animation.svg" alt="Codex × HyperFrames：用代码生成动画视频 场景图">
+            <div class="case-body"><span>04 / 主案例</span><h3>HyperFrames</h3><p>把讲稿先拆成分镜，再用代码生成可预览动画，最后导出成短视频或演示片段。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/obsidian.md">
-            <img src="../assets/recipes/obsidian.svg" alt="Codex x Obsidian：知识库自动整理与配图 场景图">
-            <div class="case-body"><span>05 / 主案例</span><h3>Obsidian：知识库自动整理与配图</h3><p>整理 Vault、建立索引、补配图。原文保留，索引和图片路径可用。</p></div>
+          <a class="case-card" href="obsidian-codex.html">
+            <img src="../assets/recipes/obsidian-codex.svg" alt="Codex × Obsidian：在知识库中自动生成配图 场景图">
+            <div class="case-body"><span>05 / 主案例</span><h3>Obsidian</h3><p>让 Codex 在本地 Vault 中整理笔记、建立索引，并为重点文章生成配图提示词或图片文件。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/feishu-bot.md">
-            <img src="../assets/recipes/feishu-bot.svg" alt="Codex x 飞书：一句话处理多维表格 场景图">
-            <div class="case-body"><span>06 / 主案例</span><h3>飞书：一句话处理多维表格</h3><p>读取表格、统计数据、生成通知。字段不误删，写入前确认。</p></div>
+          <a class="case-card" href="feishu-cli-codex.html">
+            <img src="../assets/recipes/feishu-cli-codex.svg" alt="Codex × 飞书 CLI：一句话处理飞书数据 场景图">
+            <div class="case-body"><span>06 / 主案例</span><h3>飞书 CLI</h3><p>用 Codex 读取飞书文档、多维表格或任务数据，完成统计、整理、通知草稿和写回前确认。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/ai-wiki.md">
-            <img src="../assets/recipes/ai-wiki.svg" alt="Codex x AI Wiki：搭建主题知识库 场景图">
-            <div class="case-body"><span>07 / 主案例</span><h3>AI Wiki：搭建主题知识库</h3><p>把资料组织成概念页和证据表。结论能追到来源。</p></div>
+          <a class="case-card" href="llm-wiki-codex.html">
+            <img src="../assets/recipes/llm-wiki-codex.svg" alt="Codex × LLM Wiki：在 Obsidian 中搭建 AI 知识库 场景图">
+            <div class="case-body"><span>07 / 主案例</span><h3>LLM Wiki</h3><p>把零散资料整理成概念页、证据表、阅读路线和待补问题，形成可以长期维护的主题 Wiki。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/figma-mcp.md">
-            <img src="../assets/recipes/figma-mcp.svg" alt="Codex x Figma MCP：读懂设计稿 场景图">
-            <div class="case-body"><span>08 / 主案例</span><h3>Figma MCP：读懂设计稿</h3><p>读取设计稿并拆成前端实现计划。颜色、字号、组件层级可复核。</p></div>
+          <a class="case-card" href="figma-mcp-codex.html">
+            <img src="../assets/recipes/figma-mcp-codex.svg" alt="Codex × Figma MCP：读懂设计稿 场景图">
+            <div class="case-body"><span>08 / 主案例</span><h3>Figma MCP</h3><p>让 Codex 读取 Figma 的 Frame、组件、文本、颜色和间距，再转成前端实现计划和验收截图。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/notion-mcp.md">
-            <img src="../assets/recipes/notion-mcp.svg" alt="Codex x Notion MCP：打通知识空间 场景图">
-            <div class="case-body"><span>09 / 主案例</span><h3>Notion MCP：打通知识空间</h3><p>整理 Notion 页面和数据库。写操作前列变更清单。</p></div>
+          <a class="case-card" href="notion-mcp-codex.html">
+            <img src="../assets/recipes/notion-mcp-codex.svg" alt="Codex × Notion MCP：打通知识空间 场景图">
+            <div class="case-body"><span>09 / 主案例</span><h3>Notion MCP</h3><p>通过 Notion MCP 读取页面和数据库，整理项目资料、知识卡片和任务视图，并在写入前列出变更。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/deploy-static-site.md">
-            <img src="../assets/recipes/deploy-static-site.svg" alt="Codex x 静态部署：网页一键发布到公网 场景图">
-            <div class="case-body"><span>10 / 主案例</span><h3>静态部署：网页一键发布到公网</h3><p>把本地网页部署为可分享链接。公网 200，资源路径正确。</p></div>
+          <a class="case-card" href="dkfile-deploy-codex.html">
+            <img src="../assets/recipes/dkfile-deploy-codex.svg" alt="Codex × DKFile：网页一键发布到公网 场景图">
+            <div class="case-body"><span>10 / 主案例</span><h3>DKFile</h3><p>让 Codex 检查静态站结构、资源路径和入口链接，再通过 DKFile 或同类静态托管发布到公网。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/remote-bug-fix.md">
-            <img src="../assets/recipes/remote-bug-fix.svg" alt="Codex x 云服务器：远程定位并修复 Bug 场景图">
-            <div class="case-body"><span>11 / 主案例</span><h3>云服务器：远程定位并修复 Bug</h3><p>读日志、复现、最小修复、回滚。不泄露密钥，有回滚方案。</p></div>
+          <a class="case-card" href="remote-bug-fix.html">
+            <img src="../assets/recipes/remote-bug-fix.svg" alt="Codex × 云服务器：远程定位并修复 Bug 场景图">
+            <div class="case-body"><span>11 / 主案例</span><h3>云服务器修 Bug</h3><p>让 Codex 通过只读检查、日志分析、最小复现和可回滚补丁定位远程服务问题。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/chrome-control.md">
-            <img src="../assets/recipes/chrome-control.svg" alt="Codex x Chrome：让 AI 直接控制浏览器 场景图">
-            <div class="case-body"><span>12 / 主案例</span><h3>Chrome：让 AI 直接控制浏览器</h3><p>使用用户登录态做网页检查。不触发删除、发布、支付。</p></div>
+          <a class="case-card" href="chrome-browser-plugin.html">
+            <img src="../assets/recipes/chrome-browser-plugin.svg" alt="Codex × Chrome：让 AI 直接控制浏览器 场景图">
+            <div class="case-body"><span>12 / 主案例</span><h3>Chrome 控制</h3><p>使用用户 Chrome 登录态完成明确、低风险的网页检查，例如后台筛选、页面核对、截图留证。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/github-actions-ci.md">
-            <img src="../assets/recipes/github-actions-ci.svg" alt="Codex x GitHub Actions：CI 失败自动修复 场景图">
-            <div class="case-body"><span>13 / 主案例</span><h3>GitHub Actions：CI 失败自动修复</h3><p>读取失败日志并让 CI 回绿。本地复现，远端 CI 通过。</p></div>
+          <a class="case-card" href="github-actions-ci-fix.html">
+            <img src="../assets/recipes/github-actions-ci-fix.svg" alt="Codex × GitHub Actions：CI 失败自动修复 场景图">
+            <div class="case-body"><span>13 / 主案例</span><h3>GitHub Actions</h3><p>让 Codex 读取失败日志、本地复现、做最小修复、补测试，并把 CI 回绿条件写清楚。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/literature-review.md">
-            <img src="../assets/recipes/literature-review.svg" alt="Codex x 文献综述：整理成可复核证据表 场景图">
-            <div class="case-body"><span>14 / 主案例</span><h3>文献综述：整理成可复核证据表</h3><p>把研究问题拆成 PICO 和证据表。每条结论有来源和局限性。</p></div>
+          <a class="case-card" href="clinical-literature-review.html">
+            <img src="../assets/recipes/clinical-literature-review.svg" alt="Codex × 临床文献综述：把医学问题整理成证据表 场景图">
+            <div class="case-body"><span>14 / 主案例</span><h3>临床文献综述</h3><p>把临床或科研问题拆成 PICO、纳入排除标准、逐篇证据表和局限性，而不是生成不可追溯的泛泛综述。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/hatch-pet.md">
-            <img src="../assets/recipes/hatch-pet.svg" alt="Codex x Hatch Pet：用一张照片生成专属宠物 场景图">
-            <div class="case-body"><span>15 / 主案例</span><h3>Hatch Pet：用一张照片生成专属宠物</h3><p>生成并安装 Codex 桌面宠物。素材包路径和回退方式明确。</p></div>
+          <a class="case-card" href="hatch-pet-photo.html">
+            <img src="../assets/recipes/hatch-pet-photo.svg" alt="Codex × Hatch Pet：用一张照片生成专属宠物 场景图">
+            <div class="case-body"><span>15 / 主案例</span><h3>Hatch Pet</h3><p>用一张参考照片或风格描述生成桌面宠物素材包，并记录安装、预览和回退方式。</p></div>
           </a>
 
-          <a class="case-card" href="../reader.html?file=recipes/android-remote.md">
-            <img src="../assets/recipes/android-remote.svg" alt="Codex x 安卓手机：扫码连接，远程操控 场景图">
-            <div class="case-body"><span>16 / 主案例</span><h3>安卓手机：扫码连接，远程操控</h3><p>手机端跟进桌面 Codex 任务。账号一致，连接状态正常。</p></div>
+          <a class="case-card" href="android-remote-control.html">
+            <img src="../assets/recipes/android-remote-control.svg" alt="Codex × 安卓手机：扫码连接，远程操控 场景图">
+            <div class="case-body"><span>16 / 主案例</span><h3>安卓远程操控</h3><p>让安卓手机和桌面 Codex 任务保持协同，能查看线程、补充指令、确认低风险动作。</p></div>
           </a></div></div></section>
-<section class="section"><div class="container"><span class="tag tag-cyan">案例清单</span><h2>推荐入口与验证重点</h2><div class="table-wrap pixel-box"><table><thead><tr><th>编号</th><th>案例</th><th>核心场景</th><th>推荐入口</th><th>验证重点</th></tr></thead><tbody><tr><td>01</td><td><a class="case-link" href="../reader.html?file=recipes/ppt-skill.md">Codex x PPT Skill：一句话生成演示文稿</a></td><td>用 Skill 生成 PPT 初稿</td><td>App / CLI / PPTX</td><td>PPTX 能打开，文字不溢出</td></tr>
-<tr><td>02</td><td><a class="case-link" href="../reader.html?file=recipes/drawio-diagram.md">Codex x Draw.io：AI 自动绘制架构图</a></td><td>把系统说明变成可编辑架构图</td><td>Draw.io / diagrams.net</td><td>源文件可编辑，连线方向正确</td></tr>
-<tr><td>03</td><td><a class="case-link" href="../reader.html?file=recipes/playwright-mcp.md">Codex x Playwright MCP：让 AI 操控浏览器</a></td><td>打开网页、点击入口、截图检查</td><td>MCP / Browser</td><td>截图存在，链接和控制台检查通过</td></tr>
-<tr><td>04</td><td><a class="case-link" href="../reader.html?file=recipes/animation-video.md">Codex x 动画视频：用代码生成动画</a></td><td>把讲稿变成分镜和视频工程</td><td>网页动画 / MP4</td><td>字幕不遮挡，时长和画幅正确</td></tr>
-<tr><td>05</td><td><a class="case-link" href="../reader.html?file=recipes/obsidian.md">Codex x Obsidian：知识库自动整理与配图</a></td><td>整理 Vault、建立索引、补配图</td><td>Obsidian / Markdown</td><td>原文保留，索引和图片路径可用</td></tr>
-<tr><td>06</td><td><a class="case-link" href="../reader.html?file=recipes/feishu-bot.md">Codex x 飞书：一句话处理多维表格</a></td><td>读取表格、统计数据、生成通知</td><td>飞书 / Base</td><td>字段不误删，写入前确认</td></tr>
-<tr><td>07</td><td><a class="case-link" href="../reader.html?file=recipes/ai-wiki.md">Codex x AI Wiki：搭建主题知识库</a></td><td>把资料组织成概念页和证据表</td><td>Obsidian / Wiki</td><td>结论能追到来源</td></tr>
-<tr><td>08</td><td><a class="case-link" href="../reader.html?file=recipes/figma-mcp.md">Codex x Figma MCP：读懂设计稿</a></td><td>读取设计稿并拆成前端实现计划</td><td>Figma MCP</td><td>颜色、字号、组件层级可复核</td></tr>
-<tr><td>09</td><td><a class="case-link" href="../reader.html?file=recipes/notion-mcp.md">Codex x Notion MCP：打通知识空间</a></td><td>整理 Notion 页面和数据库</td><td>Notion MCP</td><td>写操作前列变更清单</td></tr>
-<tr><td>10</td><td><a class="case-link" href="../reader.html?file=recipes/deploy-static-site.md">Codex x 静态部署：网页一键发布到公网</a></td><td>把本地网页部署为可分享链接</td><td>GitHub Pages / Vercel</td><td>公网 200，资源路径正确</td></tr>
-<tr><td>11</td><td><a class="case-link" href="../reader.html?file=recipes/remote-bug-fix.md">Codex x 云服务器：远程定位并修复 Bug</a></td><td>读日志、复现、最小修复、回滚</td><td>SSH / 服务器</td><td>不泄露密钥，有回滚方案</td></tr>
-<tr><td>12</td><td><a class="case-link" href="../reader.html?file=recipes/chrome-control.md">Codex x Chrome：让 AI 直接控制浏览器</a></td><td>使用用户登录态做网页检查</td><td>Chrome / 登录态</td><td>不触发删除、发布、支付</td></tr>
-<tr><td>13</td><td><a class="case-link" href="../reader.html?file=recipes/github-actions-ci.md">Codex x GitHub Actions：CI 失败自动修复</a></td><td>读取失败日志并让 CI 回绿</td><td>GitHub Actions</td><td>本地复现，远端 CI 通过</td></tr>
-<tr><td>14</td><td><a class="case-link" href="../reader.html?file=recipes/literature-review.md">Codex x 文献综述：整理成可复核证据表</a></td><td>把研究问题拆成 PICO 和证据表</td><td>PDF / DOI / Evidence</td><td>每条结论有来源和局限性</td></tr>
-<tr><td>15</td><td><a class="case-link" href="../reader.html?file=recipes/hatch-pet.md">Codex x Hatch Pet：用一张照片生成专属宠物</a></td><td>生成并安装 Codex 桌面宠物</td><td>Skill / App</td><td>素材包路径和回退方式明确</td></tr>
-<tr><td>16</td><td><a class="case-link" href="../reader.html?file=recipes/android-remote.md">Codex x 安卓手机：扫码连接，远程操控</a></td><td>手机端跟进桌面 Codex 任务</td><td>ChatGPT App / Desktop</td><td>账号一致，连接状态正常</td></tr></tbody></table></div></div></section>
-<section class="section" id="maturity"><div class="container"><span class="tag tag-cyan">成熟度</span><h2>案例成熟度</h2><div class="grid-3"><div class="card"><h3>已形成完整流程</h3><p class="muted">PPT、Playwright、Obsidian、飞书、文献综述、Hatch Pet、安卓远程、远程修 Bug、GitHub Actions。</p></div><div class="card"><h3>偏工具接入教程</h3><p class="muted">Draw.io、Figma、Notion、静态部署、Chrome 控制。重点在授权、典型任务和安全边界。</p></div><div class="card"><h3>扩展补充</h3><p class="muted">README、数据可视化、数据库、GitHub、采集、公众号、真实仓库、巡检、调研。</p></div></div></div></section>
-<section class="section"><div class="container"><span class="tag tag-cyan">扩展案例</span><h2>额外工作流</h2><div class="mini-grid"><a class="mini-card" href="../reader.html?file=recipes/readme-to-web.md"><strong>E01 README 变网页</strong><span>第一次看到 Codex 产出</span></a>
+<section class="section"><div class="container"><span class="tag tag-blue">案例清单</span><h2>推荐入口与验证重点</h2><div class="table-wrap"><table><thead><tr><th>编号</th><th>案例</th><th>核心场景</th><th>推荐入口</th><th>验证重点</th></tr></thead><tbody><tr><td>01</td><td><a class="case-link" href="ppt-skill-walkthrough.html">Codex × PPT Skill：一句话生成演示文稿</a></td><td>把一段文章、课程主题或会议纪要交给 Codex，让它先拆页级大纲，再生成可编辑 PPTX，并做版式检查。</td><td>桌面 App / CLI / PPTX Skill</td><td>PPTX 能打开且每页元素可编辑。</td></tr>
+<tr><td>02</td><td><a class="case-link" href="drawio-mcp.html">Codex × Draw.io MCP：AI 自动绘制架构图</a></td><td>把系统说明、业务链路或接口调用关系转成可编辑架构图，而不是只生成一张不可修改的图片。</td><td>App / MCP / diagrams.net</td><td>.drawio 文件能被 diagrams.net 打开。</td></tr>
+<tr><td>03</td><td><a class="case-link" href="playwright-mcp.html">Codex × Playwright MCP：让 AI 操控浏览器</a></td><td>让 Codex 真正打开页面、点击入口、保存截图，并基于页面状态而不是想象来判断结果。</td><td>App / MCP / Browser</td><td>截图文件存在且能看到目标页面。</td></tr>
+<tr><td>04</td><td><a class="case-link" href="hyperframes-animation.html">Codex × HyperFrames：用代码生成动画视频</a></td><td>把讲稿先拆成分镜，再用代码生成可预览动画，最后导出成短视频或演示片段。</td><td>App / CLI / 动画工程</td><td>视频能播放，时长和画幅符合要求。</td></tr>
+<tr><td>05</td><td><a class="case-link" href="obsidian-codex.html">Codex × Obsidian：在知识库中自动生成配图</a></td><td>让 Codex 在本地 Vault 中整理笔记、建立索引，并为重点文章生成配图提示词或图片文件。</td><td>CLI / Obsidian / Markdown</td><td>原文和附件没有丢失。</td></tr>
+<tr><td>06</td><td><a class="case-link" href="feishu-cli-codex.html">Codex × 飞书 CLI：一句话处理飞书数据</a></td><td>用 Codex 读取飞书文档、多维表格或任务数据，完成统计、整理、通知草稿和写回前确认。</td><td>CLI / Feishu / Base</td><td>字段没有误删或误改。</td></tr>
+<tr><td>07</td><td><a class="case-link" href="llm-wiki-codex.html">Codex × LLM Wiki：在 Obsidian 中搭建 AI 知识库</a></td><td>把零散资料整理成概念页、证据表、阅读路线和待补问题，形成可以长期维护的主题 Wiki。</td><td>Obsidian / CLI / Markdown</td><td>目录层级清楚，新增资料有放置规则。</td></tr>
+<tr><td>08</td><td><a class="case-link" href="figma-mcp-codex.html">Codex × Figma MCP：读懂设计稿</a></td><td>让 Codex 读取 Figma 的 Frame、组件、文本、颜色和间距，再转成前端实现计划和验收截图。</td><td>MCP / IDE / 前端项目</td><td>关键文本、布局和组件层级正确。</td></tr>
+<tr><td>09</td><td><a class="case-link" href="notion-mcp-codex.html">Codex × Notion MCP：打通知识空间</a></td><td>通过 Notion MCP 读取页面和数据库，整理项目资料、知识卡片和任务视图，并在写入前列出变更。</td><td>MCP / Notion</td><td>字段没有被误删。</td></tr>
+<tr><td>10</td><td><a class="case-link" href="dkfile-deploy-codex.html">Codex × DKFile：网页一键发布到公网</a></td><td>让 Codex 检查静态站结构、资源路径和入口链接，再通过 DKFile 或同类静态托管发布到公网。</td><td>CLI / 静态托管 / GitHub Pages</td><td>公网 URL 返回 200。</td></tr>
+<tr><td>11</td><td><a class="case-link" href="remote-bug-fix.html">Codex × 云服务器：远程定位并修复 Bug</a></td><td>让 Codex 通过只读检查、日志分析、最小复现和可回滚补丁定位远程服务问题。</td><td>CLI / SSH / Remote</td><td>错误可复现，修复后消失。</td></tr>
+<tr><td>12</td><td><a class="case-link" href="chrome-browser-plugin.html">Codex × Chrome：让 AI 直接控制浏览器</a></td><td>使用用户 Chrome 登录态完成明确、低风险的网页检查，例如后台筛选、页面核对、截图留证。</td><td>Chrome / 登录态 / 浏览器插件</td><td>截图显示正确页面。</td></tr>
+<tr><td>13</td><td><a class="case-link" href="github-actions-ci-fix.html">Codex × GitHub Actions：CI 失败自动修复</a></td><td>让 Codex 读取失败日志、本地复现、做最小修复、补测试，并把 CI 回绿条件写清楚。</td><td>GitHub Actions / PR / CLI</td><td>本地能复现失败。</td></tr>
+<tr><td>14</td><td><a class="case-link" href="clinical-literature-review.html">Codex × 临床文献综述：把医学问题整理成证据表</a></td><td>把临床或科研问题拆成 PICO、纳入排除标准、逐篇证据表和局限性，而不是生成不可追溯的泛泛综述。</td><td>App / CLI / PDF / DOI</td><td>每条结论有来源。</td></tr>
+<tr><td>15</td><td><a class="case-link" href="hatch-pet-photo.html">Codex × Hatch Pet：用一张照片生成专属宠物</a></td><td>用一张参考照片或风格描述生成桌面宠物素材包，并记录安装、预览和回退方式。</td><td>桌面 App / Hatch Pet / Skill</td><td>宠物名称、素材包路径、安装路径明确。</td></tr>
+<tr><td>16</td><td><a class="case-link" href="android-remote-control.html">Codex × 安卓手机：扫码连接，远程操控</a></td><td>让安卓手机和桌面 Codex 任务保持协同，能查看线程、补充指令、确认低风险动作。</td><td>ChatGPT App / Desktop App / 同一账号</td><td>手机能看到目标任务或明确失败原因。</td></tr></tbody></table></div></div></section>
+<section class="section" id="maturity"><div class="container"><span class="tag tag-blue">成熟度</span><h2>案例成熟度</h2><div class="grid-3"><div class="card"><h3>已形成完整流程</h3><p class="muted">PPT、Playwright、Obsidian、飞书、文献综述、Hatch Pet、安卓远程、远程修 Bug、GitHub Actions。</p></div><div class="card"><h3>偏工具接入教程</h3><p class="muted">Draw.io、Figma、Notion、DKFile、Chrome 控制。重点在授权、典型任务和安全边界。</p></div><div class="card"><h3>扩展补充</h3><p class="muted">README、数据可视化、数据库、GitHub、采集、公众号、真实仓库、巡检、调研。</p></div></div></div></section>
+<section class="section"><div class="container"><span class="tag tag-blue">扩展案例</span><h2>额外工作流</h2><div class="mini-grid"><a class="mini-card" href="../reader.html?file=recipes/readme-to-web.md"><strong>E01 README 变网页</strong><span>第一次看到 Codex 产出</span></a>
 <a class="mini-card" href="../reader.html?file=recipes/data-viz.md"><strong>E02 CSV 变图表</strong><span>把数据变成图表和分析</span></a>
 <a class="mini-card" href="../reader.html?file=recipes/database-mcp.md"><strong>E03 数据库 MCP</strong><span>自然语言查数据</span></a>
 <a class="mini-card" href="../reader.html?file=recipes/github-mcp.md"><strong>E04 GitHub MCP</strong><span>整理 issue 与 PR</span></a>

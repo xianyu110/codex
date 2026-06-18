@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
-  <title id="title">Codex × 云服务器：远程定位并修复 Bug 场景图</title>
-  <desc id="desc">让 Codex 通过只读检查、日志分析、最小复现和可回滚补丁定位远程服务问题。</desc>
+  <title id="title">Codex × 临床文献综述：把医学问题整理成证据表 场景图</title>
+  <desc id="desc">把临床或科研问题拆成 PICO、纳入排除标准、逐篇证据表和局限性，而不是生成不可追溯的泛泛综述。</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#f8fafc"/>
@@ -16,30 +16,30 @@
     <path d="M120 0V675M240 0V675M360 0V675M480 0V675M600 0V675M720 0V675M840 0V675M960 0V675M1080 0V675"/>
   </g>
   <rect x="70" y="64" width="1060" height="547" rx="28" fill="#ffffff" stroke="#0f172a" stroke-width="4" filter="url(#shadow)"/>
-  <rect x="70" y="64" width="1060" height="76" rx="28" fill="#64748b"/>
+  <rect x="70" y="64" width="1060" height="76" rx="28" fill="#dc2626"/>
   <circle cx="118" cy="102" r="12" fill="#fee2e2"/><circle cx="158" cy="102" r="12" fill="#fef3c7"/><circle cx="198" cy="102" r="12" fill="#dcfce7"/>
-  <text x="250" y="111" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#fff">11 / 发布与工程运维</text>
-  <text x="104" y="205" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900" fill="#111827">云服务器修 Bug</text>
-  <text x="104" y="255" font-family="Inter, Arial, sans-serif" font-size="25" fill="#475569">让 Codex 通过只读检查、日志分析、最小复现和可回滚补丁定位远程服务问题。</text>
+  <text x="250" y="111" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#fff">14 / 医学科研与证据整理</text>
+  <text x="104" y="205" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900" fill="#111827">临床文献综述</text>
+  <text x="104" y="255" font-family="Inter, Arial, sans-serif" font-size="25" fill="#475569">把临床或科研问题拆成 PICO、纳入排除标准、逐篇证据表和局限性，而不是生成不可追溯</text>
   <g transform="translate(104 320)">
     <rect width="280" height="170" rx="18" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="3"/>
     <text x="28" y="52" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" fill="#111827">输入</text>
-    <path d="M28 82H232" stroke="#64748b" stroke-width="10" stroke-linecap="round"/>
+    <path d="M28 82H232" stroke="#dc2626" stroke-width="10" stroke-linecap="round"/>
     <path d="M28 118H214" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
     <path d="M28 150H174" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
   </g>
   <g transform="translate(460 320)">
     <rect width="280" height="170" rx="18" fill="#ecfeff" stroke="#67e8f9" stroke-width="3"/>
     <text x="28" y="52" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" fill="#111827">Codex 执行</text>
-    <path d="M28 88H240" stroke="#64748b" stroke-width="10" stroke-linecap="round"/>
+    <path d="M28 88H240" stroke="#dc2626" stroke-width="10" stroke-linecap="round"/>
     <path d="M28 126H190" stroke="#0f172a" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
   </g>
   <g transform="translate(816 320)">
     <rect width="280" height="170" rx="18" fill="#f0fdf4" stroke="#86efac" stroke-width="3"/>
     <text x="28" y="52" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" fill="#111827">验收</text>
-    <circle cx="48" cy="98" r="16" fill="#64748b"/><path d="M40 98l7 7 17-21" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="48" cy="138" r="16" fill="#64748b"/><path d="M40 138l7 7 17-21" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="48" cy="98" r="16" fill="#dc2626"/><path d="M40 98l7 7 17-21" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="48" cy="138" r="16" fill="#dc2626"/><path d="M40 138l7 7 17-21" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <path d="M392 405H448" stroke="#64748b" stroke-width="10" stroke-linecap="round"/><path d="M730 405H798" stroke="#64748b" stroke-width="10" stroke-linecap="round"/>
+  <path d="M392 405H448" stroke="#dc2626" stroke-width="10" stroke-linecap="round"/><path d="M730 405H798" stroke="#dc2626" stroke-width="10" stroke-linecap="round"/>
   <text x="104" y="555" font-family="Inter, Arial, sans-serif" font-size="24" fill="#64748b">Prepare -> Prompt -> Execute -> Screenshot -> Verify</text>
 </svg>
