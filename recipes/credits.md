@@ -78,5 +78,4 @@
 - `https://maynorai.jichiyun.sbs/buy/13`
 - `https://maynorai.jichiyun.sbs/buy/7`
 - `https://momoai.czvip.cn/products/codex`
-- `https://ai.feishu.cn/wiki/JnefwEQRKiNyg6kTnN4cNphnnSh?from=from_copylink`
-- `https://my.feishu.cn/wiki/AUsJwLKNviWfxXkm6WxcGhqPnKc`
+- `https://gitee.com/the_efforts_paid_offf/codex`

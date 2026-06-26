@@ -95,8 +95,7 @@ Codex 有多个入口。第一天不要全都装，先选一个跑通。
 | 配置中转 API | `https://maynorai.jichiyun.sbs/buy/13` |
 | 充值/订阅相关入口 | `https://maynorai.jichiyun.sbs/buy/7` |
 | 备用店铺链接 | `https://momoai.czvip.cn/products/codex` |
-| 飞书配置教程 | `https://ai.feishu.cn/wiki/JnefwEQRKiNyg6kTnN4cNphnnSh?from=from_copylink` |
-| 完整上手教程 | `https://my.feishu.cn/wiki/AUsJwLKNviWfxXkm6WxcGhqPnKc` |
+| 完整文档 | `https://gitee.com/the_efforts_paid_offf/codex` |
 
 安全边界也要讲清楚：第三方中转不是 OpenAI 官方订阅。不要把中转 API Key 写进仓库，不要发到聊天里，不要截图暴露。
 

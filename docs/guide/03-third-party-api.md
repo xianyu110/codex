@@ -12,8 +12,7 @@
 | 备用店铺链接 | `https://momoai.czvip.cn/products/codex` |
 | 配置中转 API | `https://maynorai.jichiyun.sbs/buy/13` |
 | cc-switch 下载 | `https://github.com/farion1231/cc-switch/releases/` |
-| 飞书配置教程 | `https://ai.feishu.cn/wiki/JnefwEQRKiNyg6kTnN4cNphnnSh?from=from_copylink` |
-| 完整上手教程 | `https://my.feishu.cn/wiki/AUsJwLKNviWfxXkm6WxcGhqPnKc` |
+| 完整文档 | `https://gitee.com/the_efforts_paid_offf/codex` |
 
 ## 它解决什么问题
 
