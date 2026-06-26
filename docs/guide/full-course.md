@@ -94,6 +94,7 @@ Codex 有多个入口。第一天不要全都装，先选一个跑通。
 | Codex&GPTimage2 套餐 | `https://maynorai.jichiyun.sbs/buy/30` |
 | 配置中转 API | `https://maynorai.jichiyun.sbs/buy/13` |
 | 充值/订阅相关入口 | `https://maynorai.jichiyun.sbs/buy/7` |
+| 备用店铺链接 | `https://momoai.czvip.cn/products/codex` |
 | 飞书配置教程 | `https://ai.feishu.cn/wiki/JnefwEQRKiNyg6kTnN4cNphnnSh?from=from_copylink` |
 | 完整上手教程 | `https://my.feishu.cn/wiki/Vjulwif06izNiMkPor0cM9uYn1e` |
 

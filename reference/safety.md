@@ -77,6 +77,7 @@ if (!apiKey) {
 - `https://maynorai.jichiyun.sbs/buy/30`
 - `https://maynorai.jichiyun.sbs/buy/13`
 - `https://maynorai.jichiyun.sbs/buy/7`
+- `https://momoai.czvip.cn/products/codex`
 
 使用第三方中转时要注意：
 
