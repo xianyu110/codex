@@ -9,6 +9,7 @@
 | 国内站登录 | `https://codex.chatgpt-plus.top/login` |
 | 备用入口 | `https://codex2.chatgpt-plus.top/login` |
 | Codex&GPTimage2 套餐 | `https://maynorai.jichiyun.sbs/buy/30` |
+| 备用店铺链接 | `https://momoai.czvip.cn/products/codex` |
 | 配置中转 API | `https://maynorai.jichiyun.sbs/buy/13` |
 | cc-switch 下载 | `https://github.com/farion1231/cc-switch/releases/` |
 | 飞书配置教程 | `https://ai.feishu.cn/wiki/JnefwEQRKiNyg6kTnN4cNphnnSh?from=from_copylink` |
