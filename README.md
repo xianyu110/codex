@@ -1,32 +1,40 @@
+# Codex 国内站中文教程库
 
-# Codex 国内站正式上线！无需魔法、无需手机号，一半价格用上 GPT-5.5 和 GPTimage2
+这个仓库把 Codex 国内站入口、桌面 App 下载、完整入门教程、逸尘 27 篇图文实操合集、实战案例库和速查资料放在一起。适合先解决访问、账号、付款和配置，再用教程完成第一个可交付项目。
 
-## 完整教程目录
+## 快速入口
 
-这个仓库已经补充为 Codex 中文实战教程站，原来的国内站、备用网址、购买入口和下载链接继续保留。
+| 用途 | 入口 |
+|---|---|
+| 在线首页 | [index.html](index.html) |
+| 国内官网 | [codex.chatgpt-plus.top/login](https://codex.chatgpt-plus.top/login) |
+| 备用网址 | [codex2.chatgpt-plus.top/login](https://codex2.chatgpt-plus.top/login) |
+| 购买入口 | [maynorai.jichiyun.sbs/buy/30](https://maynorai.jichiyun.sbs/buy/30) |
+| 备用店铺 | [momoai.czvip.cn/products/codex](https://momoai.czvip.cn/products/codex) |
 
-| 目录 | 作用 | 入口 |
+## 教程资源地图
+
+| 内容 | 适合谁 | 入口 |
 |---|---|---|
-| `docs/guide/` | 入门教程：完整主线、安装、订阅、中转 API、App、权限、Plan Mode、Threads、Skills、MCP、自动化、CLI | [docs/index.md](docs/index.md) |
-| `recipes/` | 实战案例库：README 变网页、PPT、Draw.io、Obsidian、Playwright、飞书、GitHub Actions、服务器巡检等 | [recipes/index.md](recipes/index.md) |
-| `tutorials/yichen-codex-articles/` | 逸尘 Codex 图文教程合集：27 篇文章、图床图片、分篇 Markdown 和完整归档版 | [tutorials/yichen-codex-articles/README.md](tutorials/yichen-codex-articles/README.md) |
-| `reference/` | 速查：命令、推荐设置、安全、FAQ | [reference/commands.md](reference/commands.md) |
+| 完整入门教程 | 第一次系统学习 Codex，从安装走到第一个任务 | [docs/index.md](docs/index.md) |
+| 逸尘图文合集 | 想看真实截图、完整图文流程和实操经验 | [tutorials/yichen-codex-articles/README.md](tutorials/yichen-codex-articles/README.md) |
+| 图文合集 HTML 版 | 想在浏览器里连续阅读 27 篇文章 | [tutorials/yichen-codex-articles/index.html](tutorials/yichen-codex-articles/index.html) |
+| 全图片归档版 | 需要完整保留 85 张图片素材和上下文 | [tutorials/yichen-codex-articles/all-images.md](tutorials/yichen-codex-articles/all-images.md) |
+| 分篇 Markdown | 需要单篇引用、二次整理或发布迁移 | [tutorials/yichen-codex-articles/articles/](tutorials/yichen-codex-articles/articles/) |
+| 实战案例库 | 已经会基础操作，想套用具体工作流 | [recipes/index.md](recipes/index.md) |
+| 速查与安全 | 查命令、推荐设置、权限边界和 FAQ | [reference/commands.md](reference/commands.md) |
 
-新手推荐顺序：
+## 推荐阅读顺序
 
-1. 先看 [docs/guide/full-course.md](docs/guide/full-course.md)，按完整主线从安装走到第一个交付项目。
-2. 想分章查阅，再看 [docs/guide/00-overview.md](docs/guide/00-overview.md) 和 `01-install.md` 到 `14-first-task.md`。
-3. 第一个任务直接做 [docs/guide/14-first-task.md](docs/guide/14-first-task.md)。
-4. 想看真实图文实操，再看 [逸尘 Codex 图文教程合集](tutorials/yichen-codex-articles/README.md)。
-5. 后续从 [recipes/index.md](recipes/index.md) 选择适合自己的实战案例。
+1. 先打开 [首页](index.html)，确认入口、购买、下载和教程导航。
+2. 再看 [完整教程](docs/guide/full-course.md)，按主线从安装走到第一个可交付任务。
+3. 想分章查阅，进入 [教程目录](docs/index.md)。
+4. 想看真实图文实操，阅读 [逸尘 Codex 图文教程合集](tutorials/yichen-codex-articles/README.md)。
+5. 后续从 [实战案例库](recipes/index.md) 选择适合自己的场景。
 
----
+## 国内站和下载入口
 
-如果你一直想用 Codex，但被网络环境、账号注册、手机号验证、付款方式和模型权限卡住，那么这次可以直接看这里。
-
-**Codex 国内站正式上线。**
-
-这一次，我们把国内用户最常遇到的几个问题集中解决：
+这套资料主要解决国内用户使用 Codex 时最容易卡住的前置问题：
 
 - **无需魔法**
 - **无需海外手机号**
@@ -36,35 +44,12 @@
 - **支持 Codex 编程 Agent 和 GPTimage2 图像生成能力**
 - **适合小白、独立开发者、内容创作者和 AI 工具重度用户**
 
+Codex Desktop App 下载：
 
-
-国内官网入口：
-
-https://codex.chatgpt-plus.top/login
-
-备用网址：
-
-https://codex2.chatgpt-plus.top/login
-
-购买入口：
-
-https://maynorai.jichiyun.sbs/buy/30
-
-备用店铺链接：
-
-https://momoai.czvip.cn/products/codex
-
-Codex Desktop App 下载方法
-
-1 Mac 用户
-官方 macOS 下载链接：
-https://persistent.oaistatic.com/codex-app-prod/Codex.dmg
-
-2 Windows 用户
-
-Windows 用户可以通过微软商店下载安装或者下载本地安装包。
-本地安装包：
-https://pan.quark.cn/s/0f1763fe2ac9?pwd=rTQw
+| 系统 | 入口 |
+|---|---|
+| macOS | [官方 Codex.dmg](https://persistent.oaistatic.com/codex-app-prod/Codex.dmg) |
+| Windows | [夸克网盘本地安装包](https://pan.quark.cn/s/0f1763fe2ac9?pwd=rTQw) |
 
 ---
 
