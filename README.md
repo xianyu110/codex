@@ -1,6 +1,6 @@
 # Codex 国内站中文教程库
 
-这个仓库把 Codex 国内站入口、桌面 App 下载、完整入门教程、逸尘 27 篇图文实操合集、实战案例库和速查资料放在一起。适合先解决访问、账号、付款和配置，再用教程完成第一个可交付项目。
+这个仓库把 Codex 国内站入口、桌面 App 下载、完整入门教程、逸尘 Codex 完整教程、实战案例库和速查资料放在一起。适合先解决访问、账号、付款和配置，再用教程完成第一个可交付项目。
 
 ## 快速入口
 
@@ -17,9 +17,9 @@
 | 内容 | 适合谁 | 入口 |
 |---|---|---|
 | 完整入门教程 | 第一次系统学习 Codex，从安装走到第一个任务 | [docs/index.md](docs/index.md) |
-| 逸尘图文合集 | 想看真实截图、完整图文流程和实操经验 | [tutorials/yichen-codex-articles/README.md](tutorials/yichen-codex-articles/README.md) |
-| 图文合集 HTML 版 | 想在浏览器里连续阅读 27 篇文章 | [tutorials/yichen-codex-articles/index.html](tutorials/yichen-codex-articles/index.html) |
-| 全图片归档版 | 需要完整保留 85 张图片素材和上下文 | [tutorials/yichen-codex-articles/all-images.md](tutorials/yichen-codex-articles/all-images.md) |
+| 逸尘 Codex 完整教程 | 想按学习路径连续阅读 27 章图文教程 | [tutorials/yichen-codex-articles/README.md](tutorials/yichen-codex-articles/README.md) |
+| 完整教程浏览器版 | 想在浏览器里连续阅读整合后的教程 | [tutorials/yichen-codex-articles/index.html](tutorials/yichen-codex-articles/index.html) |
+| 全图片归档版 | 需要完整保留 85 张图片素材和原始顺序 | [tutorials/yichen-codex-articles/all-images.md](tutorials/yichen-codex-articles/all-images.md) |
 | 分篇 Markdown | 需要单篇引用、二次整理或发布迁移 | [tutorials/yichen-codex-articles/articles/](tutorials/yichen-codex-articles/articles/) |
 | 实战案例库 | 已经会基础操作，想套用具体工作流 | [recipes/index.md](recipes/index.md) |
 | 速查与安全 | 查命令、推荐设置、权限边界和 FAQ | [reference/commands.md](reference/commands.md) |
@@ -29,7 +29,7 @@
 1. 先打开 [首页](index.html)，确认入口、购买、下载和教程导航。
 2. 再看 [完整教程](docs/guide/full-course.md)，按主线从安装走到第一个可交付任务。
 3. 想分章查阅，进入 [教程目录](docs/index.md)。
-4. 想看真实图文实操，阅读 [逸尘 Codex 图文教程合集](tutorials/yichen-codex-articles/README.md)。
+4. 想看真实图文实操，阅读 [逸尘 Codex 完整教程](tutorials/yichen-codex-articles/README.md)。
 5. 后续从 [实战案例库](recipes/index.md) 选择适合自己的场景。
 
 ## 国内站和下载入口
